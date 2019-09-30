@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_toolbar" />
+
+    <TextView
+        android:id="@+id/my_shop_count_tv"
+        style="@style/text_tip_style"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:text="我的店铺总数:0" />
+
+    <com.yzf.king.widget.MultipleStatusView
+        android:id="@+id/my_shop_multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyView="@layout/custom_empty_view"
+        app:errorView="@layout/custom_error_view"
+        app:loadingView="@layout/custom_loading_view"
+        app:noNetworkView="@layout/custom_no_network_view">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/my_shop_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <cn.droidlover.xrecyclerview.XRecyclerView
+                android:id="@+id/myshop_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:recyclerBackgroundColor="@color/bg_white"
+                app:recyclerScrollbarNone="true"
+                app:recyclerScrollbarStyle="outsideOverlay" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </com.yzf.king.widget.MultipleStatusView>
+</LinearLayout>

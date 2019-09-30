@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.OrderDtlActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/order_dtl_recriver_tv"
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="收货人:" />
+
+        <TextView
+            android:id="@+id/order_dtl_phone_tv"
+            style="@style/text_normal_style"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/order_dtl_address_tv"
+            style="@style/text_normal_style"
+            android:layout_below="@+id/order_dtl_recriver_tv"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="收货地址:" />
+
+        <TextView
+            android:layout_below="@+id/order_dtl_address_tv"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            style="@style/text_tip_style"
+            android:text="(请仔细检查您的收货地址)"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        >
+        <ImageView
+            android:id="@+id/order_dtl_hear_tv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:background="@mipmap/device"
+            />
+        <TextView
+            android:id="@+id/order_dtl_title_tv"
+            style="@style/text_normal_style"
+            android:layout_toRightOf="@+id/order_dtl_hear_tv"
+            android:text=""
+            android:layout_margin="@dimen/ysf_text_size_10"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:orientation="vertical"
+        android:divider="@drawable/divider_horizontal"
+        android:showDividers="middle"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="订单金额" />
+
+            <TextView
+                android:id="@+id/order_dtl_freight_tv"
+                style="@style/text_normal_style"
+                android:layout_alignParentRight="true"
+                android:text="￥0.00"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:textColor="@color/btn_yellow_dark"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="订单状态" />
+
+            <TextView
+                android:id="@+id/order_dtl_status_tv"
+                style="@style/text_tip_style"
+                android:layout_alignParentRight="true"
+                android:text="状态"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:textColor="@color/btn_gray"
+                android:textSize="@dimen/text_sub" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="快递单号" />
+
+            <TextView
+                android:id="@+id/order_dtl_ordernumber_tv"
+                style="@style/text_tip_style"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:textColor="@color/btn_gray"
+                android:textSize="@dimen/text_sub" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="数量" />
+
+            <TextView
+                android:id="@+id/order_dtl_number_tv"
+                style="@style/text_normal_style"
+                android:layout_alignParentRight="true"
+                android:text="0"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:textColor="@color/btn_gray"
+                android:textSize="@dimen/text_sub" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/order_dtl_remark_tv"
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="备注"
+            android:textColor="@color/btn_yellow_dark"
+             />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/recommend_adapter_hear_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/ysf_text_size_10" />
+
+        <TextView
+            android:id="@+id/recommend_adapter_status_tv"
+            style="@style/text_tip_style"
+            android:textColor="@color/text_yellow_dark"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/recommend_adapter_title_tv"
+            android:layout_marginRight="@dimen/ysf_text_size_10"
+            />
+        <TextView
+            android:id="@+id/recommend_adapter_title_tv"
+            style="@style/text_normal_style"
+            android:layout_alignTop="@+id/recommend_adapter_hear_iv"
+            android:layout_toRightOf="@+id/recommend_adapter_hear_iv"
+            android:text=""
+            android:ellipsize="end"
+            android:maxEms="11"
+            android:layout_marginBottom="@dimen/ysf_text_size_10"
+            />
+
+        <TextView
+            android:id="@+id/recommend_adapter_address_tv"
+            style="@style/text_tip_style"
+            android:layout_toRightOf="@+id/recommend_adapter_hear_iv"
+            android:layout_below="@+id/recommend_adapter_title_tv"
+            android:text="" />
+
+</RelativeLayout>

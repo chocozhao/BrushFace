@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/adapter_sign_dtl_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/ysf_text_size_10"
+        android:paddingBottom="@dimen/ysf_text_size_10">
+
+        <ImageView
+            android:id="@+id/adapter_sign_dtl_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            tools:background="@mipmap/trans_zfb" />
+
+        <TextView
+            android:id="@+id/adapter_sign_dtl_name"
+            style="@style/text_normal_style"
+            android:layout_alignTop="@+id/adapter_sign_dtl_iv"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/adapter_sign_dtl_iv"
+            android:gravity="center"
+            tools:text="微信" />
+
+        <TextView
+            android:id="@+id/adapter_sign_dtl_status"
+            style="@style/text_tip_style"
+            android:layout_alignTop="@+id/adapter_sign_dtl_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ysf_text_size_10"
+            tools:text="审核中" />
+
+        <TextView
+            android:id="@+id/adapter_sign_dtl_remarks"
+            style="@style/text_tip_style"
+            android:layout_below="@+id/adapter_sign_dtl_iv"
+            android:layout_alignLeft="@+id/adapter_sign_dtl_name"
+            android:layout_marginRight="@dimen/ysf_text_size_10"
+            android:visibility="gone"
+            tools:text="原因"
+            tools:visibility="visible" />
+    </RelativeLayout>
+</LinearLayout>

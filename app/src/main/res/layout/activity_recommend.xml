@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.RecommendActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <com.yzf.king.widget.MultipleStatusView
+        android:id="@+id/recommend_multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:emptyView="@layout/custom_empty_view"
+        app:errorView="@layout/custom_error_view"
+        app:loadingView="@layout/custom_loading_view"
+        app:noNetworkView="@layout/custom_no_network_view">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/recommend_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <cn.droidlover.xrecyclerview.XRecyclerView
+                android:id="@+id/recommend_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/bg_white"
+                android:paddingTop="10dp" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </com.yzf.king.widget.MultipleStatusView>
+</LinearLayout>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.AvailableDtlActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/ysf_text_size_10"
+                android:paddingBottom="@dimen/ysf_text_size_10">
+
+                <ImageView
+                    android:id="@+id/activate_dtl_hear_iv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:background="@mipmap/device" />
+
+                <TextView
+                    android:id="@+id/activate_dtl_title_tv"
+                    style="@style/text_normal_style"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginTop="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/activate_dtl_hear_iv"
+                    android:text=""
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/available_dtl_run_tv"
+                    style="@style/text_tip_style"
+                    android:layout_below="@+id/activate_dtl_title_tv"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginTop="@dimen/text_sub"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/activate_dtl_hear_iv"
+                    android:text="距离3.2公里"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="6dp"
+                    android:background="@mipmap/person_next"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="订货信息" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:text="套        餐：" />
+
+                <TextView
+                    android:id="@+id/activate_dtl_package_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activate_dtl_date_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:text="发货时间：" />
+
+                <TextView
+                    android:id="@+id/activate_dtl_date_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:text="收货地址：" />
+
+                <TextView
+                    android:id="@+id/activate_dtl_address_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <TextView
+                android:id="@+id/activate_dtl_devicemessage_tv"
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="设备信息" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activate_dtl_model_tv"
+                    style="@style/text_tip_style"
+                    android:text="型        号：" />
+
+                <TextView
+                    android:id="@+id/activate_dtl_modelname_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activate_dtl_sncode_tv"
+                    style="@style/text_tip_style"
+                    android:text="S    N    码：" />
+
+                <TextView
+                    android:id="@+id/activate_dtl_sn_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activate_dtl_activatecode_tv"
+                    style="@style/text_tip_style"
+                    android:text="激  活   码：" />
+
+                <TextView
+                    android:id="@+id/activate_dtl_activate_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activate_dtl_termcode_tv"
+                    style="@style/text_tip_style"
+                    android:text="终  端   号：" />
+
+                <TextView
+                    android:id="@+id/activate_dtl_term_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:text="设备 编码：" />
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="72738183139193" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:id="@+id/activate_dtl_massage_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="商家信息" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:text="商家名称：" />
+
+                    <TextView
+                        android:id="@+id/activate_dtl_shopname_tv"
+                        style="@style/text_tip_style"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:text="装机时间：" />
+
+                    <TextView
+                        android:id="@+id/activate_dtl_in_tv"
+                        style="@style/text_tip_style"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:text="供应商地址：" />
+
+                    <TextView
+                        android:id="@+id/activate_dtl_shopaddress_tv"
+                        style="@style/text_tip_style"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:text="" />
+                </LinearLayout>
+
+                <include layout="@layout/line_h" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activate_dtl_device_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="设备状态" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:text="设备：" />
+
+                    <TextView
+                        android:id="@+id/activate_dtl_devicestutas_tv"
+                        style="@style/text_tip_style"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:text="" />
+                </LinearLayout>
+
+                <include layout="@layout/line_h" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activate_dtl_income_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="收益明细" />
+
+                <RelativeLayout
+                    android:id="@+id/activate_dtl_income_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:background="@color/white">
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:layout_margin="@dimen/ysf_text_size_10"
+                        android:text="累计收益" />
+
+                    <TextView
+                        android:id="@+id/activate_dtl_income_tv"
+                        style="@style/text_tip_style"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/ysf_text_size_10"
+                        android:layout_toLeftOf="@+id/activate_dtl_iv"
+                        android:text="0.00" />
+
+                    <ImageView
+                        android:id="@+id/activate_dtl_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="6dp"
+                        android:background="@mipmap/person_next" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/activate_dtl_service_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:background="@drawable/proxy_btn_bg"
+                android:text="故障报修"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

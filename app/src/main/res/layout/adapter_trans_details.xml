@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/ysf_text_size_10"
+    android:layout_marginTop="@dimen/ysf_text_size_10"
+    android:layout_marginRight="@dimen/ysf_text_size_10"
+    android:background="@drawable/person_bg_white"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/person_bg_white"
+        >
+
+        <LinearLayout
+            android:id="@+id/adapter_trans_details_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/adapter_trans_details_date_tv"
+                style="@style/text_tip_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:layout_weight="1"
+                android:text="2018-10-12 18:43:12" />
+
+            <TextView
+                android:id="@+id/adapter_trans_details_status_tv"
+                style="@style/text_tip_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="已激活设备" />
+
+        </LinearLayout>
+        <include layout="@layout/line_h"
+            android:layout_below="@+id/adapter_trans_details_ll"
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            />
+
+        <ImageView
+            android:id="@+id/adapter_trans_details_hear_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/adapter_trans_details_ll"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_marginTop="@dimen/ysf_text_size_10"
+            android:background="@mipmap/device" />
+
+        <LinearLayout
+            android:id="@+id/adapter_device_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/ysf_text_size_10"
+            android:layout_alignTop="@+id/adapter_trans_details_hear_iv"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/adapter_trans_details_hear_iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/adapter_trans_details_title_tv"
+                style="@style/text_normal_style"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/adapter_trans_details_shop_tv"
+                style="@style/text_tip_style"
+                android:layout_marginTop="@dimen/text_sub"
+                android:layout_marginBottom="@dimen/text_sub"
+                android:text=""
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_sub" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/adapter_trans_details_package_tv"
+                    style="@style/text_normal_style"
+                    android:text=""
+                    android:textColor="@color/text_6"
+                    android:textSize="@dimen/text_sub" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.TeamDetailActivity">
+
+    <include layout="@layout/title_toolbar_theme" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_blue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/trans_dtl_amt_tv"
+            style="@style/text_tip_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="￥0.00"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_28" />
+
+        <TextView
+            android:id="@+id/trans_dtl_date_tv"
+            style="@style/text_tip_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/text_white" />
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/trans_dtl_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_white"
+        app:tabIndicatorColor="@color/text_theme"
+        app:tabSelectedTextColor="@color/text_theme"
+        app:tabTextColor="@color/text_tip" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/trans_dtl_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_gray"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</LinearLayout>

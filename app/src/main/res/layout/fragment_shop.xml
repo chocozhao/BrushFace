@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_toolbar_location" />
+
+    <SearchView
+        android:id="@+id/shop_search_sv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:focusable="false"
+        android:iconifiedByDefault="false"
+        android:submitBackground="@null"
+        android:queryBackground="@null"
+        android:background="@drawable/shop_search_bg_transparent"
+        android:queryHint="搜索店铺名称" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/shop_store_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/shop_store" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="附近门店" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shop_recommend_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/shop_recommend" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="业务员推荐" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.yzf.king.widget.MultipleStatusView
+        android:id="@+id/shop_multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyView="@layout/custom_empty_view"
+        app:errorView="@layout/custom_error_view"
+        app:loadingView="@layout/custom_loading_view"
+        app:noNetworkView="@layout/custom_no_network_view">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/shop_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_shop_gray">
+
+            <cn.droidlover.xrecyclerview.XRecyclerView
+                android:id="@+id/shop_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/ysf_text_size_10"
+                android:layout_marginRight="10dp"
+                android:paddingTop="0dp" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </com.yzf.king.widget.MultipleStatusView>
+
+</LinearLayout>

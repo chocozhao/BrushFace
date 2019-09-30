@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/plan"
+        android:title="余额管理"
+        android:visible="true"
+        app:actionLayout="@layout/anchor"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/auth"
+        android:title="全额管理"
+        android:visible="true"
+        app:actionLayout="@layout/anchor"
+        app:showAsAction="never" />
+
+</menu>

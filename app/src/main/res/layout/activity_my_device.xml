@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.MyDeviceActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <TextView
+        android:id="@+id/my_device_count_tv"
+        style="@style/text_tip_style"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:text="我的设备总数:" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/my_device_available_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/device_bg_blue"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="24dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/my_device_available_tv"
+                style="@style/text_normal_style"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/text_tip_style"
+                android:layout_gravity="center"
+                android:autoSizeMaxTextSize="10dp"
+                android:autoSizeMinTextSize="2dp"
+                android:text="可用设备"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_device_activate_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/device_bg_green"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/my_device_activate_tv"
+                style="@style/text_normal_style"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/text_tip_style"
+                android:layout_gravity="center"
+                android:autoSizeMaxTextSize="10dp"
+                android:autoSizeMinTextSize="2dp"
+                android:text="已激活设备"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_device_unactivate_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/device_bg_purpul"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/my_device_unactivate_tv"
+                style="@style/text_normal_style"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/text_tip_style"
+                android:autoSizeMaxTextSize="10sp"
+                android:autoSizeMinTextSize="2sp"
+                android:text="未激活设备"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <com.yzf.king.widget.MultipleStatusView
+        android:id="@+id/my_device_multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyView="@layout/custom_empty_view"
+        app:errorView="@layout/custom_error_view"
+        app:loadingView="@layout/custom_loading_view"
+        app:noNetworkView="@layout/custom_no_network_view">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/my_device_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <cn.droidlover.xrecyclerview.XRecyclerView
+                android:id="@+id/my_device_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/bg_white"
+                android:paddingTop="0dp" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </com.yzf.king.widget.MultipleStatusView>
+</LinearLayout>

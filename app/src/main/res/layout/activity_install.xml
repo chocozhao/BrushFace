@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.InstallActivity">
+
+    <include layout="@layout/title_toolbar_right_text" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ordershopmanage_dtl_hear_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:background="@mipmap/shop_manage_hear" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_title_tv"
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/ordershopmanage_dtl_hear_iv"
+                    android:text=""
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_stauts_tv"
+                    style="@style/text_tip_style"
+                    android:layout_below="@+id/ordershopmanage_dtl_title_tv"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/ordershopmanage_dtl_hear_iv"
+                    android:text=""
+                    android:textColor="@color/btn_blue" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:text="店铺地址:" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_address_tv"
+                    style="@style/text_normal_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:id="@+id/ordershopmanage_dtl_shopphone_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="店铺联系电话" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_shopphone_tv"
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text=""
+                    android:textColor="@color/btn_blue" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:id="@+id/ordershopmanage_dtl_receipt_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="店铺编号:" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_receipt_tv"
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:id="@+id/ordershopmanage_dtl_mail_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="邮箱:" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_mail_tv"
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:id="@+id/ordershopmanage_dtl_count_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="设备台数" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_count_tv"
+                    style="@style/text_tip_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="0台" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="装机时间" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_date_tv"
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:id="@+id/ordershopmanage_dtl_supplier_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="供     应    商" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_supplier_tv"
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:id="@+id/ordershopmanage_dtl_supplierphone_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="供应商电话" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_supplierphone_tv"
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text=""
+                    android:textColor="@color/btn_blue" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:id="@+id/ordershopmanage_dtl_package_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="套        餐" />
+
+                <TextView
+                    android:id="@+id/ordershopmanage_dtl_package_tv"
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <cn.droidlover.xrecyclerview.XRecyclerView
+                        android:id="@+id/ordershopmanage_dtl_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:recyclerBackgroundColor="@color/bg_gray"
+                        app:recyclerScrollbarNone="true"
+                        app:recyclerScrollbarStyle="outsideOverlay" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ordershopmanage_dtl_remark_tv"
+                        style="@style/text_tip_style"
+                        android:layout_alignTop="@+id/wait_shop_cb"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="@dimen/ysf_text_size_10"
+                        android:layout_marginBottom="6dp"
+                        android:layout_toRightOf="@+id/wait_shop_cb"
+                        android:text="备注："
+                        android:textColor="@color/btn_yellow_dark"
+
+                        />
+
+                    <Button
+                        android:id="@+id/ordershopmanage_dtl_add_bt"
+                        style="@style/text_normal_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_below="@+id/ordershopmanage_dtl_remark_tv"
+                        android:layout_marginLeft="@dimen/ysf_text_size_20"
+                        android:layout_marginRight="@dimen/ysf_text_size_20"
+                        android:background="@drawable/proxy_btn_bg"
+                        android:focusable="true"
+                        android:text="新增设备"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/ordershopmanage_dtl_finish_bt"
+                        style="@style/text_normal_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_below="@+id/ordershopmanage_dtl_add_bt"
+                        android:layout_marginLeft="@dimen/ysf_text_size_20"
+                        android:layout_marginTop="@dimen/ysf_text_size_10"
+                        android:layout_marginRight="@dimen/ysf_text_size_20"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/install_finsh_bg_blue"
+                        android:focusable="true"
+                        android:text="装机完成"
+                        android:textColor="@color/btn_blue" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="#00000000"
+    android:orientation="vertical"
+   >
+
+    <LinearLayout
+        android:id="@+id/pop_notification_bg_ll"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:background="@mipmap/pop_notification_black">
+
+        <TextView
+            android:id="@+id/pop_notification_title_tv"
+            style="@style/text_normal_style"
+            android:layout_marginTop="120dp"
+            android:padding="@dimen/ysf_text_size_10"
+            android:text=""
+            android:textStyle="bold" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            >
+                <TextView
+                    android:id="@+id/pop_notification_context_tv"
+                    style="@style/text_normal_style"
+                    android:padding="@dimen/ysf_text_size_12"
+                    android:text="" />
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <com.yzf.king.widget.StateButton
+            android:id="@+id/pop_notification_bt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/ysf_text_size_10"
+            android:layout_marginBottom="@dimen/ysf_text_size_10"
+            android:layout_gravity="center"
+            app:normalBackgroundColor="@color/bg_black"
+            app:radius="80dp"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#00000000"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/pop_notification_cancel_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pop_notification_bg_rl"
+            android:background="@mipmap/pop_notification_cancel"
+
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

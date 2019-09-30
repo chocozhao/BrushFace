@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.SignDtlActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/sign_dtl_shop_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ysf_text_size_10"
+        android:layout_marginBottom="@dimen/ysf_text_size_20"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/sign_dtl_hear_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:background="@mipmap/shop_manage_hear" />
+
+        <TextView
+            android:id="@+id/sign_dtl_title_tv"
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/sign_dtl_hear_iv"
+            android:text=""
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sign_dtl_data_tv"
+            style="@style/text_tip_style"
+            android:layout_below="@+id/sign_dtl_title_tv"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/sign_dtl_hear_iv"
+            android:text="" />
+    </RelativeLayout>
+
+
+    <cn.droidlover.xrecyclerview.XRecyclerView
+        android:id="@+id/sign_dtl_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:paddingTop="0dp" />
+
+
+</LinearLayout>

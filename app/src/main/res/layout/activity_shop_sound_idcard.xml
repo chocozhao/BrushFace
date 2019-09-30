@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/divider_horizontal"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context="com.yzf.king.ui.activitys.ShopSoundIdcardActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/shop_bg_gray"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="请重新提交法人身份证信息" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/shop_sound_address"
+        style="@style/text_normal_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_12"
+        android:layout_marginTop="@dimen/ysf_text_size_18"
+        android:layout_marginBottom="@dimen/ysf_text_size_18"
+        android:text="上传身份证正反面" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ysf_text_size_12"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/shop_sound_idcard_zm_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/shop_sound_idcard_zm" />
+
+        <ImageView
+            android:id="@+id/shop_sound_idcard_fm_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:background="@mipmap/shop_sound_idcard_fm" />
+
+        <TextView
+            android:id="@+id/shop_sound_idcard_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="tips"
+            android:textColor="@color/text_red"
+            android:textSize="@dimen/text_tip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_12"
+        android:text="请上传或者拍照身份证正反面照片，点击照片可重新拍摄"
+        android:textColor="@color/btn_yellow_dark" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/shop_sound_idcard_name"
+            style="@style/text_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ysf_text_size_12"
+            android:layout_marginTop="@dimen/ysf_text_size_18"
+            android:layout_marginBottom="@dimen/ysf_text_size_18"
+            android:text="姓名" />
+
+        <TextView
+            android:id="@+id/shop_sound_idcard_name_tv"
+            style="@style/text_normal_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/shop_sound_idcard_name"
+            android:gravity="right"
+            android:text="" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/shop_sound_idcard_number"
+            style="@style/text_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ysf_text_size_12"
+            android:layout_marginTop="@dimen/ysf_text_size_18"
+            android:layout_marginBottom="@dimen/ysf_text_size_18"
+            android:text="身份证号" />
+
+        <TextView
+            android:id="@+id/shop_sound_idcard_number_tv"
+            style="@style/text_normal_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/shop_sound_idcard_number"
+            android:gravity="right"
+            android:text="" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/shop_sound_idcard_define_bt"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="@dimen/ysf_text_size_24"
+        android:background="@color/btn_blue"
+        android:text="确定"
+        android:textColor="@color/white" />
+</LinearLayout>

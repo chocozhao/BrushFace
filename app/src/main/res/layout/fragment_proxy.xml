@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/proxy_ll"
+    >
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/ysf_text_size_20"
+        android:background="@mipmap/proxy_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:gravity="center"
+            android:text="业务员"
+            android:textColor="@color/black_bar"
+            android:textSize="@dimen/ysf_text_size_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="@string/proxy_title"
+            android:textColor="@color/black_bar"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="@string/proxy_salesman_context"
+            android:textColor="@color/black_bar"
+            />
+
+        <Button
+            android:id="@+id/proxy_define_bt"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/ysf_text_size_20"
+            android:layout_marginBottom="@dimen/ysf_text_size_20"
+            android:layout_marginLeft="@dimen/ysf_text_size_20"
+            android:background="@drawable/proxy_btn_bg" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

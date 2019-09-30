@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yzf.king.ui.activitys.ShopContractActivity">
+
+    <include
+        android:id="@+id/shop_contract_title"
+        layout="@layout/title_toolbar" />
+
+    <TextView
+        android:id="@+id/shop_contract_title_tv"
+        style="@style/text_normal_style"
+        android:layout_below="@+id/shop_contract_title"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:text="铺货合约"
+        android:textStyle="bold" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_above="@+id/shop_contract_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_contract_title_tv"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginRight="@dimen/ysf_text_size_10"
+        >
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_width="match_parent"
+            android:text="@string/shop_contract" />
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/shop_contract_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <CheckBox
+            android:id="@+id/shop_contract_cb"
+            style="@style/text_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:drawableLeft="@drawable/radio_proxy_button_selector"
+            android:padding="@dimen/ysf_text_size_20"
+            android:text="   我同意"
+            android:textSize="@dimen/text_normal"
+            android:background="@color/shop_contract_bg_blue"
+            android:textColor="@color/bg_light_blue" />
+
+        <Button
+            android:id="@+id/shop_contract_bt"
+            android:layout_toRightOf="@+id/shop_contract_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/btn_blue"
+            android:text="立即铺货"
+            android:textColor="@color/white"
+            android:padding="@dimen/ysf_text_size_20"
+            android:textSize="@dimen/text_title"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

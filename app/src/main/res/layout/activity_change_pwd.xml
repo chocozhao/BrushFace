@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.ChangePwdActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="旧密码"
+                    android:textColor="@color/text_6"
+                    android:textSize="@dimen/text_normal" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/changepwd_oldpwd_et"
+                    style="@style/text_XEditText_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@null"
+                    android:gravity="center|right"
+                    android:hint="请输入旧密码"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_white"
+                android:divider="@drawable/divider_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_normal_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新密码"
+                        android:textColor="@color/text_6"
+                        android:textSize="@dimen/text_normal" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/changepwd_newpwd_et"
+                        style="@style/text_XEditText_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@null"
+                        android:gravity="center|right"
+                        android:hint="请输入6-20位新密码"
+                        android:inputType="textPassword"
+                        android:maxLength="23"
+                        android:padding="5dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_normal_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="再次输入"
+                        android:textColor="@color/text_6"
+                        android:textSize="@dimen/text_normal" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/changepwd_newpwds_et"
+                        style="@style/text_XEditText_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@null"
+                        android:gravity="center|right"
+                        android:hint="请再次输入6-20位新密码"
+                        android:inputType="textPassword"
+                        android:maxLength="23"
+                        android:padding="5dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.yzf.king.widget.StateButton
+                android:id="@+id/changepwd_bt"
+                style="@style/button_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="完成"
+                app:normalBackgroundColor="@color/btn_blue"
+                app:pressedBackgroundColor="@color/btn_yellow_p"
+                app:radius="5dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

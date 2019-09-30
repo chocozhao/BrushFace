@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_shield"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            style="@style/text_tip_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息已智能加密，只用于银联网络身份识别"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="6dp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@mipmap/green1" />
+
+            <View
+                android:layout_width="54dp"
+                android:layout_height="1dp"
+                android:background="@color/bg_black"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@mipmap/green2" />
+
+            <View
+                android:layout_width="53dp"
+                android:layout_height="1dp"
+                android:background="@color/bg_black"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@mipmap/gray3" />
+
+            <View
+                android:layout_width="53dp"
+                android:layout_height="1dp"
+                android:background="@color/bg_black"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@mipmap/gray4"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/ulidcard_fm_iv"
+
+
+                        android:layout_width="272dp"
+                        android:layout_height="183dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/img_card_fm" />
+
+                    <TextView
+                        android:id="@+id/ulidcard_fm_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="tips"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/text_tip"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                >
+                <TextView
+                    android:id="@+id/text"
+                    style="@style/text_tip_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击拍摄身份认证" />
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/text"
+                    android:layout_toRightOf="@+id/text"
+                    android:text="国徽面"
+                    android:textColor="#FFD7BA80" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="272dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_normal_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="有效期:"
+                        android:textColor="@color/text_6" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/ulidcard_day_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:hint="可编辑"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="@dimen/text_normal" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="272dp"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_gray"></View>
+
+
+                <LinearLayout
+                    android:layout_width="272dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_normal_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发证机关:"
+                        android:textColor="@color/text_6" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/ulidcard_agent_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:hint="可编辑"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="@dimen/text_normal" />
+
+                    <View
+                        android:layout_width="272dp"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_gray"></View>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <com.yzf.king.widget.StateButton
+                android:id="@+id/ulidcard_confirm_bt"
+                style="@style/button_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="下一步"
+                app:normalBackgroundColor="@color/btn_blue"
+                app:pressedBackgroundColor="@color/btn_gray_p"
+                app:radius="5dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

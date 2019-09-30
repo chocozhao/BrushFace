@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.BankCardDetailActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bank_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bankcard_blue"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="6dp">
+
+                    <ImageView
+                        android:id="@+id/bankcarddetail_iv"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/circle_bg"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/bank" />
+
+
+                    <TextView
+                        android:id="@+id/bankcarddetail_bankname_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/bankcarddetail_iv"
+                        android:text="中国银行"
+                        android:textColor="@color/bg_white"
+                        android:textSize="@dimen/text_normal" />
+
+                    <TextView
+                        android:id="@+id/bankcarddetail_banktype_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bankcarddetail_bankname_tv"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/bankcarddetail_iv"
+                        android:text="储蓄卡"
+                        android:textColor="@color/bg_white"
+                        android:textSize="@dimen/text_sub" />
+
+                    <TextView
+                        android:id="@+id/bankcarddetail_acctno_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bankcarddetail_banktype_tv"
+                        android:layout_alignStart="@+id/bankcarddetail_bankname_tv"
+                        android:layout_alignLeft="@+id/bankcarddetail_bankname_tv"
+                        android:layout_marginTop="8dp"
+                        android:autoSizeMaxTextSize="20sp"
+                        android:autoSizeMinTextSize="5sp"
+                        android:autoSizeTextType="uniform"
+                        android:maxLines="1"
+                        android:text="5454646464646464656546"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_big" />
+
+                    <TextView
+                        android:id="@+id/bankcarddetail_payday_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bankcarddetail_acctno_tv"
+                        android:layout_alignStart="@+id/bankcarddetail_bankname_tv"
+                        android:layout_alignLeft="@+id/bankcarddetail_bankname_tv"
+                        android:layout_marginTop="8dp"
+                        android:text="账单日：09日"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_sub"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/bankcarddetail_repayday_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bankcarddetail_acctno_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@+id/bankcarddetail_payday_tv"
+                        android:text="还款日：19日"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_sub"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/bankcarddetail_limit_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bankcarddetail_acctno_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@+id/bankcarddetail_repayday_tv"
+                        android:text="额度：0元"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_sub"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:divider="@drawable/divider_horizontal"
+                    android:dividerPadding="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="持卡人" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/bankcarddetail_name_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入姓名"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            app:x_pattern="4,4,4,4,4,4"
+                            app:x_separator=" " />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="银行卡号" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/bankcarddetail_cardno_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入信用卡号"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            app:x_pattern="4,4,4,4,4,4"
+                            app:x_separator=" " />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="有效期" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/bankcarddetail_expdate_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:gravity="center_vertical|right"
+                            android:hint="4位有效期(例09/22,填0922)"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="CVN2" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/bankcarddetail_cvn2_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:gravity="center_vertical|right"
+                            android:hint="信用卡背后3位CVN2"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="账单日" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/bankcarddetail_statementday_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:gravity="center_vertical|right"
+                            android:hint="账单日"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="还款日" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/bankcarddetail_repaymentday_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:gravity="center_vertical|right"
+                            android:hint="还款日"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="手机号码" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/bankcarddetail_phoneno_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="银行卡预留手机号"
+                            android:focusable="false"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            app:x_pattern="3,4,4"
+                            app:x_separator=" " />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.yzf.king.widget.StateButton
+                    android:id="@+id/bankcarddetail_unbind_bt"
+                    style="@style/button_text"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="解绑信用卡"
+                    app:normalStrokeColor="@color/theme"
+                    app:normalStrokeWidth="1dp"
+                    app:pressedStrokeWidth="1dp"
+                    app:normalTextColor="@color/theme"
+                    app:pressedStrokeColor="@color/text_tip"
+                    app:pressedTextColor="@color/text_tip"
+                    app:radius="5dp" />
+
+                <com.yzf.king.widget.StateButton
+                    android:id="@+id/bankcarddetail_modify_bt"
+                    style="@style/button_text"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="修改信用卡"
+                    app:normalBackgroundColor="@color/btn_gray"
+                    app:pressedBackgroundColor="@color/btn_gray_p"
+                    app:radius="5dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.OrderManageActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <ImageView
+        android:id="@+id/order_manage_promotion_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/order_manage_promotion"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        />
+    <ImageView
+        android:id="@+id/order_manage_apply_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/order_manage_apply"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginRight="@dimen/ysf_text_size_10"
+        android:layout_marginBottom="@dimen/ysf_text_size_10"
+        />
+
+    <ImageView
+        android:id="@+id/order_manage_shop_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/order_manage_shop"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginRight="@dimen/ysf_text_size_10"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

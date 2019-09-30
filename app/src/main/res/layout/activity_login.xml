@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical"
+    android:padding="16.0dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/ysf_text_size_20"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="@mipmap/login_logo" />
+                <TextView
+                    android:visibility="gone"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/person_bg_white"
+                android:orientation="vertical">
+                <com.xw.repo.XEditText
+                    android:id="@+id/login_phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="45.0dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/shap_editview_bg"
+                    android:hint="@string/input_phone"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:textColor="@color/text_6"
+                    android:textColorHint="@color/text_hint"
+                    android:theme="@style/MyEditText"
+                    app:x_pattern="3,4,4"
+                    app:x_separator=" " />
+
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/login_pwd_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="45.0dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/shap_editview_bg"
+                    android:hint="@string/input_pwd"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="5.0dp"
+                    android:paddingLeft="10.0dp"
+                    android:textColor="@color/text_6"
+                    android:textColorHint="@color/text_hint"
+                    android:theme="@style/MyEditText" />
+
+                <com.yzf.king.widget.StateButton
+                    android:id="@+id/login_bt"
+                    style="@style/button_text"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="46dp"
+                    android:text="@string/login"
+                    android:textColor="@color/text_white"
+                    app:normalBackgroundColor="@color/btn_blue"
+                    app:pressedBackgroundColor="@color/bg_light_blue"
+                    app:radius="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/login_forget_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:padding="10dp"
+                android:text="忘记密码？点击重置"
+                android:textColor="@color/text_white" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

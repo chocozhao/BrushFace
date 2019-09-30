@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/ysf_text_size_10"
+    android:layout_marginTop="@dimen/ysf_text_size_10"
+    android:layout_marginRight="@dimen/ysf_text_size_10"
+    android:background="@drawable/person_bg_white"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardElevation="2dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ysf_text_size_10"
+        >
+
+        <ImageView
+            android:id="@+id/order_promotion_hear_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:background="@mipmap/shop_manage_hear" />
+
+        <TextView
+            android:id="@+id/order_promotion_title_tv"
+            style="@style/text_normal_style"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/ysf_text_size_10"
+            android:layout_marginRight="90dp"
+            android:layout_toRightOf="@+id/order_promotion_hear_iv"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/order_promotion_address_tv"
+            style="@style/text_tip_style"
+            android:layout_below="@+id/order_promotion_title_tv"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_marginTop="@dimen/ysf_text_size_20"
+            android:layout_marginBottom="@dimen/ysf_text_size_10"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/order_promotion_status_tv"
+            style="@style/text_tip_style"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/order_promotion_title_tv"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text=""
+            android:textColor="@color/btn_blue" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

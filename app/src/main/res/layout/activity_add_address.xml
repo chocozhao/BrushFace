@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.AddAddressActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:divider="@drawable/divider_horizontal"
+                android:dividerPadding="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        style="@style/text_normal_color_6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="姓名：" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/addaddress_name_tv"
+                        style="@style/text_XEditText_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="请输入收货人姓名"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        style="@style/text_normal_color_6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="电话：" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/addaddress_pnone_tv"
+                        style="@style/text_XEditText_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="请填写收货人电话号码"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        style="@style/text_normal_color_6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="收获省市区：" />
+
+                    <TextView
+                        android:id="@+id/addaddress_address_tv"
+                        style="@style/text_XEditText_style"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="right|center"
+                        android:hint="请填写收货省市区"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        style="@style/text_normal_color_6"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:gravity="center|left"
+                        android:text="详细地址：" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/addaddress_daaressdtl_tv"
+                        style="@style/text_XEditText_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@null"
+                        android:gravity="right|left"
+                        android:hint="请填写详细地址（如：省、市、街道、门牌地址）"
+                        android:maxLines="1" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.yzf.king.widget.MultipleStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:zhy="http://schemas.android.com/tools"
+    android:id="@+id/profit_multiplestatusview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:emptyView="@layout/custom_empty_view"
+    app:errorView="@layout/custom_error_view"
+    app:loadingView="@layout/custom_loading_view"
+    app:noNetworkView="@layout/custom_no_network_view">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/profit_swiperefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/profit_filter_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/text_title_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易方式" />
+
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:id="@+id/profit_type_flowlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        zhy:max_select="-1"/>
+
+                    <include layout="@layout/line_h" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/text_title_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="交易结果" />
+
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:id="@+id/profit_status_flowlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        zhy:max_select="-1"
+                        />
+
+                    <include layout="@layout/line_h" />
+                </LinearLayout>
+
+
+                <TextView
+                    style="@style/text_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="时间" />
+
+                <RelativeLayout
+                    android:id="@+id/profit_begintime_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        style="@style/text_normal_color_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="开始时间" />
+
+                    <TextView
+                        android:id="@+id/begin_time"
+                        style="@style/text_normal_color_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView6"
+                        android:layout_alignBottom="@+id/textView6"
+                        android:layout_marginEnd="63dp"
+                        android:layout_marginRight="63dp"
+                        android:layout_toStartOf="@+id/imageView3"
+                        android:layout_toLeftOf="@+id/imageView3"
+                        android:text="2019-01-10" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/next" />
+                </RelativeLayout>
+
+                <include layout="@layout/line_h" />
+
+                <RelativeLayout
+                    android:id="@+id/profit_endtime_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_normal_color_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="结束时间" />
+
+                    <TextView
+                        android:id="@+id/end_time"
+                        style="@style/text_normal_color_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="80dp"
+                        android:text="2016-10-10" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/next" />
+                </RelativeLayout>
+
+
+                <com.yzf.king.widget.StateButton
+                    android:id="@+id/profit_search_bt"
+                    style="@style/button_text"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:text="确定搜索"
+                    app:normalBackgroundColor="@color/btn_gray"
+                    app:pressedBackgroundColor="@color/btn_gray_p"
+                    app:radius="5dp" />
+
+
+            </LinearLayout>
+
+            <cn.droidlover.xrecyclerview.XRecyclerView
+                android:id="@+id/profit_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:recyclerBackgroundColor="@color/bg_white"
+                app:recyclerScrollbarNone="true"
+                app:recyclerScrollbarStyle="outsideOverlay" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</com.yzf.king.widget.MultipleStatusView>

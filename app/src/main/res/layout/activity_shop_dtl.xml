@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.ShopDtlActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="铺货信息"
+                android:textColor="@color/btn_blue" />
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginTop="@dimen/ysf_text_size_10"
+                android:text="设备台数"
+                android:textSize="@dimen/ysf_text_size_14" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ysf_text_size_10">
+
+                <TextView
+                    android:id="@+id/shop_dtl_count_tv"
+                    style="@style/text_normal_style"
+                    android:text="0台"
+                    android:textColor="@color/text_tip" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginTop="@dimen/ysf_text_size_10"
+                android:text="选择设备"
+                android:textSize="@dimen/ysf_text_size_14" />
+
+            <RelativeLayout
+                android:id="@+id/shop_dtl_select_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ysf_text_size_10">
+
+                <TextView
+                    android:id="@+id/shop_dtl_select_tv"
+                    style="@style/text_normal_style"
+                    android:text="请选择可用设备"
+                    android:textColor="@color/text_tip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@mipmap/person_next" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginTop="@dimen/ysf_text_size_10"
+                android:text="装机时间"
+                android:textSize="@dimen/ysf_text_size_14" />
+
+            <RelativeLayout
+                android:id="@+id/shop_dtl_date_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ysf_text_size_10">
+
+                <TextView
+                    android:id="@+id/shop_dtl_date_tv"
+                    style="@style/text_normal_style"
+                    android:hint="请选择装机时间"
+                    android:textColor="@color/text_tip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@mipmap/person_next" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:id="@+id/shop_dtl_devicemessage_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="设备信息" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:text="型        号：" />
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:text="支付宝刷脸支付二代蜻蜓F4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:text="S    N    码：" />
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:text="xxxxxxxxxxx" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:text="激  活   码：" />
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:text="72738183139193" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:text="序  列   码：" />
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:text="72738183139193" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:text="设备编码：" />
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:layout_marginLeft="@dimen/ysf_text_size_10"
+                        android:text="72738183139193" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="商家信息"
+                android:textColor="@color/btn_blue" />
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:text="商家名称:"
+                android:textSize="@dimen/ysf_text_size_14" />
+
+            <TextView
+                android:id="@+id/shop_dtl_shopname_tv"
+                style="@style/text_tip_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="" />
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:text="选择商家申请时间:"
+                android:textSize="@dimen/ysf_text_size_14" />
+
+            <TextView
+                android:id="@+id/shop_dtl_applydate_tv"
+                style="@style/text_tip_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="" />
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:text="商家地址:"
+                android:textSize="@dimen/ysf_text_size_14" />
+
+            <TextView
+                android:id="@+id/shop_dtl_address_tv"
+                style="@style/text_tip_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="" />
+
+            <Button
+                android:id="@+id/shop_dtl_define_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_20"
+                android:layout_marginTop="@dimen/ysf_text_size_20"
+                android:layout_marginRight="@dimen/ysf_text_size_20"
+                android:background="@drawable/proxy_btn_bg"
+                android:text="确定铺货"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

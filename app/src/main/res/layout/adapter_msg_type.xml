@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/msgtype_sys"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:foreground="@drawable/selector_foreground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/msgtype_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/msgtype_sys" />
+
+            <TextView
+                android:id="@+id/msgtype_textView"
+                style="@style/text_normal_color_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="系统通知" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/msgtype_point_textView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/icon_red_dot"
+            android:textColor="@color/white"
+            tools:text="2"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

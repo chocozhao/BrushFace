@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bg_white">
+
+    <TextView
+        android:id="@+id/popup_text"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="2dp"
+        android:gravity="center"
+        android:singleLine="false"
+        android:textSize="16dp"
+        android:textColor="@color/text_6" />
+
+    <include layout="@layout/line_h" />
+
+</LinearLayout>

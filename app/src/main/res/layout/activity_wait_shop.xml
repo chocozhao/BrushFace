@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.OrderManageShopActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ysf_text_size_10"
+        android:layout_marginBottom="@dimen/ysf_text_size_10"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ordermanageshop_hear_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:background="@mipmap/shop_manage_hear" />
+
+        <TextView
+            android:id="@+id/ordermanageshop_title_tv"
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/ordermanageshop_hear_iv"
+            tools:text="支付宝刷脸支付二代蜻蜓F4"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ordermanageshop_stauts_tv"
+            style="@style/text_tip_style"
+            android:layout_below="@+id/ordermanageshop_title_tv"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/ordermanageshop_hear_iv"
+            tools:text="申请中"
+            android:textColor="@color/btn_blue" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_normal_style"
+            android:text="店铺地址:" />
+
+        <TextView
+            android:id="@+id/ordermanageshop_address_tv"
+            style="@style/text_normal_style"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+             />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:id="@+id/ordershopmanage_receipt_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="店铺编号:" />
+
+        <TextView
+            android:id="@+id/ordershopmanage_receipt_tv"
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="" />
+
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:id="@+id/ordershopmanage_mail_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="邮箱:" />
+
+        <TextView
+            android:id="@+id/ordershopmanage_mail_tv"
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="" />
+
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="设备台数" />
+
+        <TextView
+            android:id="@+id/ordermanageshop_count_tv"
+            style="@style/text_tip_style"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="0台"
+            />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h" />
+
+
+    <RelativeLayout
+        android:id="@+id/ordermanageshop_date_select_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="装机时间" />
+
+        <TextView
+            android:id="@+id/ordermanageshop_date_select_tv"
+            style="@style/text_tip_style"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:layout_toLeftOf="@+id/ordermanageshop_date_select_iv"
+            android:text="请选择" />
+
+        <ImageView
+            android:id="@+id/ordermanageshop_date_select_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:background="@mipmap/person_next" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h" />
+
+    <RelativeLayout
+        android:id="@+id/ordermanageshop_device_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ordermanageshop_device_tv"
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="选择设备" />
+
+        <TextView
+            android:id="@+id/ordermanageshop_device_select_tv"
+            style="@style/text_tip_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:layout_toLeftOf="@+id/ordermanageshop_device_select_iv"
+            android:layout_toRightOf="@+id/ordermanageshop_device_tv"
+            android:gravity="right"
+            android:text="选择设备" />
+
+        <ImageView
+            android:id="@+id/ordermanageshop_device_select_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:background="@mipmap/person_next" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <com.yzf.king.widget.MultipleStatusView
+            android:id="@+id/wait_shop_multiplestatusview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            app:emptyView="@layout/custom_empty_view"
+            app:errorView="@layout/custom_error_view"
+            app:loadingView="@layout/custom_loading_view"
+            app:noNetworkView="@layout/custom_no_network_view">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/wait_shop_swiperefreshlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <cn.droidlover.xrecyclerview.XRecyclerView
+                    android:id="@+id/wait_shop_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:recyclerBackgroundColor="@color/bg_gray"
+                    app:recyclerScrollbarNone="true"
+                    app:recyclerScrollbarStyle="outsideOverlay" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </com.yzf.king.widget.MultipleStatusView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/ysf_text_size_24"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/ordermanageshop_shopcontract_cb"
+            style="@style/text_tip_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_marginTop="6dp"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/radio_proxy_button_selector"
+            android:focusable="true"
+            android:text="   我已阅读并同意" />
+
+        <TextView
+            android:id="@+id/ordermanageshop_shopcontract_tv"
+            style="@style/text_tip_style"
+            android:layout_alignTop="@+id/ordermanageshop_shopcontract_cb"
+            android:layout_toRightOf="@+id/ordermanageshop_shopcontract_cb"
+            android:text="《铺货合约协议》"
+            android:textColor="@color/btn_blue" />
+
+        <Button
+            android:id="@+id/wait_shop_define_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ordermanageshop_shopcontract_tv"
+            android:layout_marginLeft="@dimen/ysf_text_size_20"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="@dimen/ysf_text_size_20"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/proxy_btn_bg"
+            android:text="确认铺货"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

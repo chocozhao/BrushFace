@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.MerchApplyPermitActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/merch_apply_permit_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/ysf_text_size_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginTop="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:text="填写经营信息"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="(必须为实体店铺或者公司)"
+                    android:textSize="@dimen/text_sub" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/merch_apply_category_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ysf_text_size_10">
+
+                <TextView
+                    android:id="@+id/merch_apply_category"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择经营类目" />
+
+                <TextView
+                    android:id="@+id/merch_apply_category_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/merch_apply_category_iv"
+                    android:layout_toRightOf="@+id/merch_apply_category"
+                    android:gravity="right"
+                    android:hint="请选择" />
+
+                <ImageView
+                    android:id="@+id/merch_apply_category_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="@dimen/ysf_text_size_12"
+                    android:background="@mipmap/person_next" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:text="申请设备数量" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/merch_apply_device_number"
+                    style="@style/text_normal_style"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:hint="请写设备申请数量"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_14" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="上传营业执照"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/merch_apply_type_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ysf_text_size_10">
+
+                <TextView
+                    android:id="@+id/merch_apply_type"
+                    style="@style/text_normal_style"
+                    android:text="营业执照类型" />
+
+                <TextView
+                    android:id="@+id/merch_apply_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/merch_apply_type_iv"
+                    android:layout_toRightOf="@+id/merch_apply_type"
+                    android:gravity="right"
+                    android:hint="请选择" />
+
+                <ImageView
+                    android:id="@+id/merch_apply_type_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="@dimen/ysf_text_size_12"
+                    android:background="@mipmap/person_next" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_12"
+                android:layout_marginTop="@dimen/ysf_text_size_18"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/merch_apply_permit_add_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/permit_add_iv" />
+
+                <TextView
+                    android:id="@+id/merch_apply_permit_add_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/merch_apply_permit_add_iv"
+                    android:layout_toRightOf="@+id/merch_apply_permit_add_iv"
+                    android:padding="5dp"
+                    android:text="tips"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/text_tip"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/merch_apply_permit_add_iv"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_toRightOf="@+id/merch_apply_permit_add_iv"
+                    android:text="上传同名营业执照，收款不限额"
+                    android:textColor="@color/btn_yellow_dark" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/merch_apply_permit_shopname"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="店铺名称" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/merch_apply_permit_shopname_tv"
+                    style="@style/text_normal_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/merch_apply_permit_shopname"
+                    android:background="@null"
+                    android:gravity="right" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/merch_apply_permit_number"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="营业执照号" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/merch_apply_permit_number_et"
+                    style="@style/text_normal_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/merch_apply_permit_number"
+                    android:background="@null"
+                    android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:gravity="right"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/merch_apply_permit_legal_person"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="法人" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/merch_apply_permit_legal_person_tv"
+                    style="@style/text_normal_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/merch_apply_permit_legal_person"
+                    android:background="@null"
+                    android:gravity="right" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/merch_apply_permit_data"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:text="营业执照注册时间" />
+
+                <TextView
+                    android:id="@+id/merch_apply_permit_data_tv"
+                    style="@style/text_tip_style"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/merch_apply_permit_data"
+                    android:layout_alignLeft="@+id/merch_apply_permit_data"
+                    android:hint="请选择时间"
+                    android:paddingTop="@dimen/ysf_text_size_10"
+                    android:paddingBottom="@dimen/ysf_text_size_10"
+                    android:textColor="@color/btn_gray"
+                    android:textSize="@dimen/text_14" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/merch_apply_legal_person_phone"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="法人电话" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/merch_apply_legal_person_phone_tv"
+                    style="@style/text_normal_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/merch_apply_legal_person_phone"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入法人电话"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    app:x_pattern="3,4,4"
+                    app:x_separator=" " />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/merch_apply_legal_person_email"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="法人邮箱" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/merch_apply_legal_person_email_tv"
+                    style="@style/text_normal_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/merch_apply_legal_person_email"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入法人邮箱"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/merch_apply_address_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/merch_apply_address"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="地区" />
+
+
+                <TextView
+                    android:id="@+id/merch_apply_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/merch_apply_address_iv"
+                    android:layout_toRightOf="@+id/merch_apply_address"
+                    android:gravity="right"
+                    android:text="请选择地区" />
+
+                <ImageView
+                    android:id="@+id/merch_apply_address_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="@dimen/ysf_text_size_12"
+                    android:background="@mipmap/person_next" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <com.xw.repo.XEditText
+                android:id="@+id/merch_apply_address_dtl_tv"
+                style="@style/text_normal_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="详细地址：街道楼牌号等"
+                android:paddingLeft="@dimen/ysf_text_size_10"
+                android:paddingTop="@dimen/ysf_text_size_18"
+                android:paddingBottom="@dimen/ysf_text_size_18"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/merch_apply_permit_prompt"
+                style="@style/text_normal_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_12"
+                android:layout_marginTop="@dimen/ysf_text_size_18"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:text="上传身份证信息"
+                />
+
+            <LinearLayout
+                android:id="@+id/merch_apply_permit_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ysf_text_size_12"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/merch_apply_permit_zm_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/shop_sound_idcard_zm" />
+
+                <ImageView
+                    android:id="@+id/merch_apply_permit_fm_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:background="@mipmap/shop_sound_idcard_fm" />
+
+
+                <TextView
+                    android:id="@+id/merch_apply_permit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="tips"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/text_tip"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    />
+            </LinearLayout>
+            <include layout="@layout/line_h" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/divider_horizontal"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/merch_apply_permit_prompts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:text="请上传或者拍照身份证正反面照片，点击照片可重新拍摄"
+                    android:textColor="@color/btn_yellow_dark"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    />
+                <RelativeLayout
+                    android:id="@+id/merch_apply_permit_name_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/merch_apply_permit_name"
+                        style="@style/text_normal_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ysf_text_size_12"
+                        android:layout_marginTop="@dimen/ysf_text_size_18"
+                        android:layout_marginBottom="@dimen/ysf_text_size_18"
+                        android:text="姓名" />
+
+                    <TextView
+                        android:id="@+id/merch_apply_permit_name_tv"
+                        style="@style/text_normal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/ysf_text_size_10"
+                        android:layout_toRightOf="@+id/merch_apply_permit_name"
+                        android:gravity="right"
+                        android:text="" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/merch_apply_permit_number_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/merch_apply_permit_idnumber"
+                        style="@style/text_normal_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ysf_text_size_12"
+                        android:layout_marginTop="@dimen/ysf_text_size_18"
+                        android:layout_marginBottom="@dimen/ysf_text_size_18"
+                        android:text="身份证号" />
+
+                    <TextView
+                        android:id="@+id/merch_apply_permit_idnumber_tv"
+                        style="@style/text_normal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/ysf_text_size_10"
+                        android:layout_toRightOf="@+id/merch_apply_permit_idnumber"
+                        android:gravity="right"
+                        android:text="" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/merch_apply_permit_validity_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/merch_apply_permit_validity"
+                        style="@style/text_normal_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ysf_text_size_12"
+                        android:layout_marginTop="@dimen/ysf_text_size_18"
+                        android:layout_marginBottom="@dimen/ysf_text_size_18"
+                        android:text="身份证有效期" />
+
+                    <TextView
+                        android:id="@+id/merch_apply_permit_begin_tv"
+                        style="@style/text_normal_style"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@+id/merch_apply_permit_validity"
+                        android:gravity="right"
+                        android:layout_toLeftOf="@+id/merch_apply_permit_end_tv"
+                        tools:text="2019-2-2"
+                        />
+
+                    <TextView
+                        android:id="@+id/merch_apply_permit_end_tv"
+                        style="@style/text_normal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/ysf_text_size_10"
+                        tools:text="2019-2-2"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/merch_apply_define_bt"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/ysf_text_size_24"
+                android:background="@color/btn_blue"
+                android:text="下一步"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

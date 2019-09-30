@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="provinces">
+        <item>阳江</item>
+        <item>云浮</item>
+        <item>珠海</item>
+        <item>广州</item>
+        <item>潮州</item>
+        <item>佛山</item>
+        <item>肇庆</item>
+        <item>河源</item>
+        <item>惠州</item>
+        <item>深圳</item>
+        <item>东莞</item>
+        <item>湛江</item>
+        <item>汕头</item>
+        <item>清远</item>
+        <item>茂名</item>
+        <item>梅州</item>
+        <item>中山</item>
+        <item>汕尾</item>
+        <item>韶关</item>
+        <item>江门</item>
+        <item>揭阳</item>
+    </string-array>
+</resources>

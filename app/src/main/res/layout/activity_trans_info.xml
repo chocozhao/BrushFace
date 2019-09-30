@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_toolbar" />
+
+    <com.yzf.king.widget.MultipleStatusView
+        android:id="@+id/multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyView="@layout/custom_empty_view"
+        app:errorView="@layout/custom_error_view"
+        app:loadingView="@layout/custom_loading_view"
+        app:noNetworkView="@layout/custom_no_network_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/acct_profit_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/profit_bg"
+                android:foreground="@drawable/selector_foreground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/trans_totalsum_tv"
+                    style="@style/text_title_style"
+                    android:layout_marginTop="20dp"
+                    android:text="0.00"
+                    android:textColor="@color/text_yellow"
+                    android:textSize="@dimen/text_28" />
+
+                <TextView
+                    style="@style/text_normal_color_6"
+                    android:layout_marginTop="10dp"
+                    android:text="交易总金额"
+                    android:textColor="@color/text_white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/trans_totalcount_tv"
+                                style="@style/text_title_style"
+                                android:layout_marginTop="10dp"
+                                android:text="0.00"
+                                android:textColor="@color/text_yellow" />
+
+                            <TextView
+                                style="@style/text_tip_style"
+                                android:layout_marginTop="10dp"
+                                android:text="交易总笔数"
+                                android:textColor="@color/text_white" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/line_v" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/trans_day_tv"
+                                style="@style/text_title_style"
+                                android:layout_marginTop="10dp"
+                                android:text="0.00"
+                                android:textColor="@color/text_yellow" />
+
+                            <TextView
+                                style="@style/text_tip_style"
+                                android:layout_marginTop="10dp"
+                                android:text="日交易数据"
+                                android:textColor="@color/text_white" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/line_v" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/trans_month_tv"
+                                style="@style/text_title_style"
+                                android:text="0.00"
+                                android:maxLines="1"
+                                android:layout_marginTop="10dp"
+                                android:textColor="@color/text_yellow" />
+
+                            <TextView
+                                style="@style/text_tip_style"
+                                android:layout_marginTop="10dp"
+                                android:text="月交易数据"
+                                android:textColor="@color/text_white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/line_gray" />
+
+            <cn.droidlover.xrecyclerview.XRecyclerView
+                android:id="@+id/trans_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></cn.droidlover.xrecyclerview.XRecyclerView>
+
+
+        </LinearLayout>
+
+    </com.yzf.king.widget.MultipleStatusView>
+</LinearLayout>

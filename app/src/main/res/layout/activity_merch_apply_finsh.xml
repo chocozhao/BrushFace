@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yzf.king.ui.activitys.MerchApplyFinshActivity">
+
+    <include
+        android:id="@+id/merch_apply_finsh_title"
+        layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/merch_apply_finsh_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/merch_apply_finsh_title"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/merch_apply_finsh_iv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="资料正在审核中，请耐心等待！" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/ysf_text_size_20"
+            android:textColor="@color/btn_yellow_dark"
+            android:text="重要提示：店铺资料提交完成，是否能安装请与当地供货商联系！" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/merch_apply_finsh_define_bt"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/merch_apply_finsh_iv"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="@dimen/ysf_text_size_10"
+        android:background="@drawable/shop_finish_btn_bg"
+        android:text="完成"
+        android:textColor="@color/white" />
+</RelativeLayout>

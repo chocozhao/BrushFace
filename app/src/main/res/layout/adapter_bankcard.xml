@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:foreground="@drawable/selector_foreground"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/bank_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bankcard_blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="6dp">
+
+            <ImageView
+                android:id="@+id/bank_iv"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/circle_bg"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/bank" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/quickpay"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/bankcard_adapter_bankname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/bank_iv"
+                android:autoSizeMaxTextSize="16sp"
+                android:autoSizeMinTextSize="5sp"
+                android:autoSizeTextType="uniform"
+                android:maxLines="1"
+                android:text="中国银行"
+                android:textColor="@color/bg_white"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:id="@+id/bankcard_adapter_banktype_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bankcard_adapter_bankname_tv"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/bank_iv"
+                android:text="储蓄卡"
+                android:textColor="@color/bg_white"
+                android:textSize="@dimen/text_sub" />
+
+            <TextView
+                android:id="@+id/bankcard_adapter_acctno_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bankcard_adapter_banktype_tv"
+                android:layout_alignStart="@+id/bankcard_adapter_bankname_tv"
+                android:layout_alignLeft="@+id/bankcard_adapter_bankname_tv"
+                android:layout_marginTop="8dp"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="5sp"
+                android:autoSizeTextType="uniform"
+                android:maxLines="1"
+                android:text="5454646464646464656546"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_big" />
+
+            <TextView
+                android:id="@+id/bankcard_adapter_payday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bankcard_adapter_acctno_tv"
+                android:layout_alignStart="@+id/bankcard_adapter_bankname_tv"
+                android:layout_alignLeft="@+id/bankcard_adapter_bankname_tv"
+                android:layout_marginTop="8dp"
+                android:text="账单日：09日"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_sub"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/bankcard_adapter_repayday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bankcard_adapter_acctno_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/bankcard_adapter_payday_tv"
+                android:text="还款日：19日"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_sub"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/bankcard_adapter_limit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bankcard_adapter_acctno_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/bankcard_adapter_repayday_tv"
+                android:text="额度：0元"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_sub"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

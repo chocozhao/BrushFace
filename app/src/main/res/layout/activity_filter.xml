@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activitys.FilterActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/text_normal_style"
+                android:text="开始时间" />
+
+            <TextView
+                style="@style/text_normal_style"
+                android:id="@+id/filter_begin_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shap_editview_bg"
+                android:hint="如20190502"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_6"
+                android:textColorHint="@color/text_tip"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/text_normal_style"
+                android:text="结束时间" />
+
+            <TextView
+                style="@style/text_normal_style"
+                android:id="@+id/filter_end_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shap_editview_bg"
+                android:hint="如20190502"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_6"
+                android:textColorHint="@color/text_tip"
+                 />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/text_normal_style"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="商户名" />
+
+    <com.xw.repo.XEditText
+        android:id="@+id/filter_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dp"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginRight="@dimen/ysf_text_size_10"
+        android:background="@drawable/shap_editview_bg"
+        android:hint="请输入商户姓名"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textColor="@color/text_6"
+        android:textColorHint="@color/text_tip"
+        android:theme="@style/MyEditText" />
+
+    <TextView
+        style="@style/text_normal_style"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="手机号" />
+
+    <com.xw.repo.XEditText
+        android:id="@+id/filter_phone_tv"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dp"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginRight="@dimen/ysf_text_size_10"
+        android:background="@drawable/shap_editview_bg"
+        android:hint="@string/input_phone"
+        android:inputType="phone"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:textColor="@color/text_6"
+        android:textColorHint="@color/text_tip"
+        android:theme="@style/MyEditText"
+        app:x_pattern="3,4,4"
+        app:x_separator=" " />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/filter_reset_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/line_gray"
+                android:layout_weight="1"
+                android:text="重置" />
+
+            <Button
+                android:id="@+id/filter_confirm_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/light_theme"
+                android:text="确定"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.StepActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+
+    <com.yzf.king.widget.MultipleStatusView
+        android:id="@+id/multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white"
+        app:emptyView="@layout/custom_empty_view"
+        app:errorView="@layout/custom_error_view"
+        app:loadingView="@layout/custom_loading_view"
+        app:noNetworkView="@layout/custom_no_network_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.yzf.king.widget.stepView.StepView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/step_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:dotPosition="top"
+                        app:highDotColor="@color/theme"
+                        app:lineColor="#eee"
+                        app:lineWidth="1dp"
+                        app:rightMargin="30dp"
+                        app:stepViewRadius="10dp" />
+                </android.support.v4.widget.NestedScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.yzf.king.widget.StateButton
+                    android:id="@+id/step_bt"
+                    style="@style/button_text"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="下一步"
+                    android:visibility="gone"
+                    app:normalBackgroundColor="@color/btn_gray"
+                    app:pressedBackgroundColor="@color/btn_gray_p"
+                    app:radius="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.yzf.king.widget.MultipleStatusView>
+
+
+</LinearLayout>

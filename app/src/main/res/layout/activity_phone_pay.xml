@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.PhonePayActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/phonepay_bank_iv"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/circle_gray_bg"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/bank" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_unionpay" />
+
+            <TextView
+                android:id="@+id/phonepay_bankname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/phonepay_bank_iv"
+                android:text="中国银行"
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:id="@+id/phonepay_bankNo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phonepay_bankname_tv"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/phonepay_bank_iv"
+                android:text="尾号0000"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_sub" />
+Z
+            <TextView
+                android:id="@+id/phonepay_banktype_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phonepay_bankname_tv"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/phonepay_bankNo_tv"
+                android:text="储蓄卡"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_sub" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:divider="@drawable/divider_horizontal"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:background="@color/bg_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_color_6"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="服务费" />
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/text_hint"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_28"
+                    android:text="￥" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/phonepay_fee_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@null"
+                    android:hint="保证金"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:focusable="false"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColorHint="@color/text_hint"
+                    android:textStyle="bold"
+                    android:text="00.00"
+                    android:textSize="@dimen/text_28" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_color_6"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="手机号" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/phonepay_phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@null"
+                    android:hint="11位手机号码"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_color_6"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="短信验证码" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/phonepay_code_et"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="注意查收短信"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="16sp" />
+
+                <com.yzf.king.widget.StateButton
+                    android:id="@+id/phonepay_code_bt"
+                    style="@style/button_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:text="获取验证码"
+                    android:textColor="@color/text_white"
+                    android:textSize="12sp"
+                    app:normalBackgroundColor="@color/btn_yellow"
+                    app:pressedBackgroundColor="@color/btn_yellow_p"
+                    app:radius="5dp"
+                    app:unableBackgroundColor="@color/text_tip" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.yzf.king.widget.StateButton
+        android:id="@+id/pay_confirm_bt"
+        style="@style/button_text"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:text="确认支付"
+        app:normalBackgroundColor="@color/btn_gray"
+        app:pressedBackgroundColor="@color/btn_gray_p"
+        app:radius="5dp" />
+</LinearLayout>

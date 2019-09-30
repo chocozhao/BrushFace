@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.yzf.king.ui.activitys.WeChatPublicActivity">
+
+    <include
+        android:id="@+id/wechat_message_toolbar"
+        layout="@layout/title_toolbar" />
+
+    <ImageView
+        android:id="@+id/wechat_message_logo_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/wechat_message_name_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wechat_message_toolbar"
+        app:srcCompat="@mipmap/login_logo" />
+
+    <TextView
+        android:id="@+id/wechat_message_name_tv"
+        style="@style/text_normal_style"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/wechat_message_logo_iv"
+        app:layout_constraintTop_toBottomOf="@+id/wechat_message_toolbar"
+        tools:text="乐收官方公众号" />
+
+    <TextView
+        android:id="@+id/wechat_message_way_one_tv"
+        style="@style/text_normal_style"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="方式一"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wechat_message_name_tv" />
+
+    <TextView
+        android:id="@+id/wechat_message_way_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:textIsSelectable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wechat_message_way_one_tv"
+        tools:text="打开微信，搜索“乐收刷脸支付”，点击关注。" />
+
+    <TextView
+        android:id="@+id/wechat_message_way_two_tv"
+        style="@style/text_normal_style"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="方式二"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wechat_message_way_one" />
+
+    <TextView
+        android:id="@+id/wechat_message_way_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wechat_message_way_two_tv"
+        tools:text="扫一扫下面的二维码图案，关注公众号" />
+
+    <ImageView
+        android:id="@+id/wechat_message_way_two_iv"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wechat_message_way_two"
+        app:layout_constraintVertical_bias="0.045"
+        app:srcCompat="@mipmap/wechat_public_code_iv" />
+
+    <TextView
+        android:id="@+id/wechat_public_save_tv"
+        style="@style/text_normal_style"
+        android:layout_marginTop="@dimen/ysf_text_size_20"
+        android:padding="@dimen/ysf_text_size_10"
+        android:text="保存图片"
+        android:textColor="@color/btn_blue"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wechat_message_way_two_iv" />
+
+
+</android.support.constraint.ConstraintLayout>

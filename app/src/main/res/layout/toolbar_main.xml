@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:background="@color/colorPrimary"
+    app:contentInsetLeft="0.0dip"
+    app:contentInsetStart="0.0dip"
+    app:titleTextColor="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@id/iv_back"
+            android:layout_width="55.0dip"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/iv_back_selector_theme"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@mipmap/back" />
+
+        <View
+            android:id="@id/view_line"
+            android:layout_width="1.0px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="@color/white" />
+
+        <ImageView
+            android:id="@id/iv_finish"
+            android:layout_width="55.0dip"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/view_line"
+            android:background="@drawable/iv_back_selector_theme"
+            android:scaleType="center"
+            android:src="@mipmap/close" />
+
+        <TextView
+            android:id="@id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_title" />
+
+        <ImageView
+            android:id="@id/iv_more"
+            android:layout_width="55.0dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/iv_back_selector_theme"
+            android:scaleType="center"
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

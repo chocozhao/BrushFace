@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#525665</color>
+    <color name="colorPrimaryDark">#525665</color>
+    <color name="colorAccent">#525665</color>
+
+
+    <!--字体颜色-->
+    <color name="text_main">#333333</color>
+    <color name="text_6">#666666</color>
+    <color name="text_tip">#ababab</color>
+    <color name="text_hint">#cccccc</color>
+    <color name="text_theme">#525665</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_yellow">#D8BC83</color>
+    <color name="text_red">#FFCA4C54</color>
+    <color name="text_blue">#2480D2</color>
+    <color name="text_yellow_dark">#E77C19</color>
+    <color name="home_title_gry">#FF666666</color>
+
+
+
+    <!-- app颜色 -->
+    <color name="theme">#525665</color>
+    <color name="light_theme">#525665</color>
+    <color name="main_bg">#f2f2f2</color>
+    <color name="bg_white">#ffffff</color>
+    <color name="bg_gray">#F9FAFC</color>
+    <color name="line_white">#ffffff</color>
+    <color name="line_gray">#cccccc</color>
+    <color name="line_green">#37d581</color>
+    <color name="black_bar">#373a41</color>
+    <color name="transparent">#00000000</color>
+    <color name="shop_search_bg_transparent">#3D8E8E93</color>
+    <color name="bg_item_gray">#D6D6D6</color>
+    <color name="yellow">#D8BC83</color>ue
+    <color name="bg_light_black">#525665</color>
+    <color name="bg_black">#272B3B</color>
+    <color name="bg_light_blue">#28C0FF</color>
+    <color name="bg_blue">#4062FF</color>
+    <color name="bg_vip_light">#C7E1FA</color>
+    <color name="bg_vip">#3894FA</color>
+    <color name="bg_pos_light">#C6FCEA</color>
+    <color name="bg_pos">#25BABD</color>
+    <color name="bg_scan_light">#FFC9D0</color>
+    <color name="bg_scan">#FF83AF</color>
+    <color name="bg_plan_light">#FFE5D6</color>
+    <color name="bg_plan">#FF8E8C</color>
+    <color name="bg_share_light">#ECD8AD</color>
+    <color name="bg_share">#D7BA80</color>
+    <color name="bg_person_light">#28C0FF</color>
+    <color name="bg_person">#4062FF</color>
+    <color name="bg_shop_gray">#F3F2F2</color>
+    <color name="bg_shop_blue">#DFEAF5</color>
+    <color name="device_bg_purple">#FFB0A8CD</color>
+    <color name="device_bg_bule">#FF60BBE8</color>
+    <color name="device_bg_green">#FF89C1A4</color>
+    <color name="shop_contract_bg_blue">#FFD9EDFF</color>
+    <color name="bg_green">#23D576</color>
+    <color name="bg_wx_green">#FF3CB035</color>
+    <color name="shop_bg_gray">#FFF2F2F2</color>
+
+
+    <color name="partTranslucent">#39000000</color>
+
+
+    <!-- 按钮颜色 -->
+    <color name="btn_white">#ffffff</color>
+    <color name="btn_white_p">#e0dddd</color>
+    <color name="btn_gray">#525665</color>
+    <color name="btn_gray_p">#cccccc</color>
+    <color name="btn_yellow">#D8BC83</color>
+    <color name="btn_yellow_p">#cccccc</color>
+    <color name="btn_yellow_dark">#E77C19</color>
+    <color name="btn_red_p">#cccccc</color>
+    <color name="btn_red_dark">#FFE76060</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="btn_blue">#008AFF</color>
+    <color name="bg_btn_pos">#FFF2F2F2</color>
+    <color name="shop_contract_btn_blue">#FF98D0FF</color>
+    <color name="shop_contract_btn_gray">#A2A1A1</color>
+
+
+</resources>

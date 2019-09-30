@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">乐收</string>
+    <string name="TOPBRANCHNO">F0000001</string>
+    <!--域名配置-->
+    <!--<string name="BASE_URL">http://king.hi-card.cn/apiservice/</string>-->
+    <string name="BASE_URL">http://121.201.42.229/apiservice/</string>
+    <string name="H5_URL">http://smileh5.yiyoupay.net/</string>
+    <!--第三方接入-->
+    <string name="PUSH">true</string>
+    <string name="JPUSH_APPKEY">dbed70800b14fefedda86b83</string>
+    <string name="JPUSH_CHANNEL">default</string>
+
+    <string name="QIYU_KEY">5d47aa4cc4066a24261cdef658a7c0bd</string>
+
+    <string name="BAIDU_API_KEY">aSmw5GySXUcDMB0qdLihncuZYsRnkCdx</string>
+    <string name="BAIDU_API_KEY_TEST">NsTgaYxvtAeTGQpna6Rx4GLK7414adqA</string>
+
+    <string name="ALIYUN_APPKEY">27889632</string>
+    <string name="ALIYUN_APPSECRET">e06b7ad5a59485acc76a4e1c2ffe2f6f</string>
+    <string name="ALIYUN_RSA">MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCRqZbwMvnrqwMlBCjsLOnFNz946QOlIufeVzJuIakF2TjllEOgenFaAP+16ObZ403LNy8zjbAtajBHVVuzPrAfayIvLTIX39iBkNP7yIZBww1EtzcdXBvAtSla6aC1xkjUuWxXbj1BXINo9nD1RqPGZOJbrR/MbBJTF33UPlv6hjmBxqk4FIh5tJ1iXf1Hkejj/AptUvc2v18LlovINIs4q3Epn9dQ/39poV719HorEeshzrF1gUFMefuxfDO2b2k00FXzVL5HIoeJzlNVlOxLN0iPn0d0nImRzEoVXU+3vFCJS05SKWiTE8S1oeuJ5bPcNcCRww8l7xmPI953ZnIRAgMBAAECggEAXGVJtBVxyFaSyREpcB5RLuMLpQORZ1eL4tJGz+sUDvyqBZ6Vgx8H9cJ6cYZJoN55QzU/AKGYpkYcV7NCVqGmEFfhuDEf/FrmN9GJVcXtu5shOHxLPplllUiU8fEOGx+qpRz1J0RrIKGxTYw9PKhRTJBDsUlQyVeoDALzswTXTUKJ+8nZAJopOsDoyTV2WjWwhAKKa3TEB12pofpCMM18rcprM7hX2FDc07n6kDYtC5rAWW2ZcIOGbgPI54VfcXCnEULvzmdee42fX7Eci3UD0p7FEvYYnlWa1wIilBU58PLKGSHOF7XbGoMesnBvn8Pt+ecHRn/ewH5rMWIjbFh10QKBgQDxJ3Oj68r9eRS3KS2xONjsRUAQJA/l1YEP1Y0Kx9Iik6jNgv8ASsIGYplB73CdlLFsP96pY48TH+MYR/5B8JHGqiQRM16y6xR+KJCgbjP/BSsidDSQ0qYM2xTHHueqFo1GjAnbjbPu0dtxFeHQKQiJmFkW7dTCT29cAotr1bYcNQKBgQCaoTSc86PNyblUQAj0mHFmbll1Bilo/Bd56F180dsBvYgLBtb12RQAwvRkqwZ0q4/rdKMa2HdWkXiBK13w2Bya3O7uE/52l3yDnF5UUUVBsQ9YyLlsVQJlW7lt5oq+n9rxdKsxyir1BRy0w+XbH4Q5hROd5lIj+GFIwVHHNe2h7QKBgQCQLTQYFssfzBo0f2wP/prCd4ybmdPfZ0xoORbAEUNy5LERXXYzqH5j7uMN5qd/rvx8aZsnzpwlpPTS+YfryHZ/Pg2eMwY1FhMEciA1qm1v1Jk7WhprU2VvXjQH8FQ0/pKsUOE74HZpHBKEg76kA0RVbz4kVUDUg0Vizyqn5/ee2QKBgDCRAV1qiMBR44u6sRVh6/woHKDM1qTKyPTZLsPNheP+C4SrGUkObWHv2aLktJpgaEujzrbX1mOyPQ8U9+R1fEaHrePJE9tbqRgNPPNuszn2ysMwCE0mRiJftNX32wwUWUgNRNfWj7d1a5a7EK7KL1WBnq+xb4sssCGR1oWjQofhAoGBAJXBkmXblvYv85N4pK7/OwiGAVNn9Y0bPIhthOLQCB7rwrzOCV4NLhbxOKzCIlo2sNWMYPhNa1TTAXbjCqM20m84HiQ9mtRI4cZwCz9ZlJ8zCReczcu78nO6kRLgAkHHtHH+ilLb5j3ylmrgnjlL7UycFI0Mu+ZdnLoNw1sUwl78</string>
+
+
+    <!--分享-->
+    <string name="errcode_success">分享成功</string>
+    <string name="errcode_cancel">分享取消</string>
+    <string name="errcode_deny">分享被拒绝</string>
+    <string name="errcode_unknown">分享返回</string>
+
+    <!--通用-->
+    <string name="empty_view_hint">暂无数据</string>
+    <string name="error_view_hint">加载失败</string>
+    <string name="no_network_view_hint">网络异常</string>
+
+    <!--登陆-->
+    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="fast_login">快速登录</string>
+    <string name="forgot_pwd">忘记密码？</string>
+    <string name="get_code">获取验证码</string>
+    <string name="input_code">请输入验证码</string>
+    <string name="input_phone">请输入手机号码</string>
+    <string name="input_pwd">请输入密码</string>
+    <string name="lib_name">Alerter</string>
+    <string name="loading_default_messsage">Please wait…</string>
+    <string name="login">登录</string>
+    <string name="login_by_pwd">账号密码登录</string>
+    <string name="welcome_login">欢迎登录易呗</string>
+
+    <string name="phone_incorrect">手机号格式不正确</string>
+    <string name="press_again_exit">再按一次退出</string>
+    <string name="register">注册</string>
+    <string name="remeber_pwd">记住密码</string>
+
+    <!--首页-->
+    <string name="home_title">首页</string>
+    <string name="home_guide">增值服务</string>
+
+    <!--我的-->
+    <string name="adapter_title">乐收刷脸支付</string>
+    <string name="Verified_context">根据国家法规对支付服务实名制要求，你需要进 行身份信息完善，才能继续使用乐收APP</string>
+    <string name="person_proxy_contract">代理合约</string>
+    <string name="person_level">代理商</string>
+    <string name="ok">确定</string>
+    <string name="learn_more">了解更多</string>
+
+    <!--代理-->
+    <string name="proxy_title">推荐奖励:</string>
+    <string name="proxy_name">拼团</string>
+    <string name="proxy_agreement">《代理合约协议》</string>
+    <string name="proxy_upgrade_prompt">你已经是代理商等级，不需要升级</string>
+    <string name="proxy_salesman_context">1.业务员推荐全国任意一家商铺申请刷脸设备，并安装点亮，可获得推荐补贴110元/户，同时享受此商家收款的万3/元补贴；\n\n\n
+2.业务员推荐全国任意一位代理，可获得直接推荐180元奖励，间接推荐120元奖励。"</string>
+    <string name="proxy_context">1.代理推荐全国任意一家商铺申请刷脸设备，并安装点亮，可获得推荐补贴160元/户，同时享受此商家收款的万5/元补贴；\n\n\n
+2.代理推荐全国任意一位代理，可获得直接推荐180元奖励，间接推荐120元奖励；\n\n\n
+3.代理享受全国业务员团队推荐的商家，每台设备补贴50元+商家设备收款万2/元补贴.</string>
+    <string name="shop_contract">\n
+
+本协议是您与广州乐收刷脸科技产业控股有限公司（以下简称为：乐收公司）之间就乐收APP服务等相关事宜所订立的合约，请您仔细阅读本注册协议（或称铺货合约），您点击乐收APP上的“同意”并“继续”按钮后，本协议即构成对三方有约束力的法律文件。纸质铺货合约与在乐收APP上同意注册协议，具有同等法律效力。\n
+
+需安装设备的商家或是向支付宝和微信申请设备的商家简称为甲方。\n
+乐收APP软件开发者乐收公司，即技术服务和信息资讯的提供方简称为乙方。\n
+愿意向商家提供设备供应的投资人或供应商简称为丙方。\n
+
+根据《中华人民共和国合同法》及其他有关法律、法规的规定，甲、乙、丙三方本着平等、自愿、诚实守信的原则，对刷脸支付设备供应提供合理合规的方案作以下铺货约定：\n
+第一条  服务内容与要求\n
+
+乙方为“乐收APP”软件技术服务提供方，为甲方和丙方提供第三方支付设备申请服务与设备采购，并对甲丙双方设备供应服务进行监督。现就三方权利与义务进行约定。\n
+第二条：权利和义务\n
+
+甲方权利义务\n
+2.1.1甲方享有在乙方提供的APP中进行刷脸设备（下简称设备）申请，通过支付渠道官方审核后享有免费安装设备的必要条件。\n
+2.1.2甲方享有丙方提供的设备使用权，须对设备正确使用和有效的维护。\n
+2.1.3 若出现恶意申请，甲方不配合乙方整改，乙方有权利终止甲方办理业务。\n
+2.1.4 甲方有义务对丙方提供的设备进行保全，若设备丢失、损毁，甲方应对设备进行维修或赔偿，设备官方统一标价为1999元/台。\n
+2.1.5 甲方２019年9月30日激活设备，享有乙方提供的设备入驻奖励活动，按刷脸消费笔数分月发放，每月封顶100元，连续六个月。活动细则以乙方公告为准，乙方有权利变更活动规则，请留意活动有效日期与截止日期。\n
+2.1.6 设备在保修期内，若有质量问题，由丙方按设备生产厂商保修条款处理。\n
+2.1.7 甲方享有资金安全保障服务，若出现资金不到账或账目出错，由乙方对甲方出现资金错误的问题进行协调处理，并向支付渠道提供方报备和申请调单服务。\n
+
+乙方权利义务\n
+2.2.1乙方有权利要求甲方提供真实的身份信息，以协助甲方申请第三方刷脸支付设备的开户，并对相关资料进行监督和管理。\n
+2.2.2乙方有权利将已通过微信或支付宝官方审核的商家提供给丙方，设备由丙方铺货给甲方使用。\n
+2.2.3乙方有权利对甲丙双方的权利与义务条款进行约定，若有一方违反条款规定，乙方有权终止双方服务，十五天内退回乙方提供的补贴、分润及从其渠道采购设备的活动政策和返佣所得补贴、相关礼品和赠送的设备。\n
+2.2.4 乙方有权利对甲丙双方的利益保障进行管理和维护，若因第三方支付公司渠道有所变动，乙方有权利对活动规则进行调整。\n
+2.2.５乙方在本协议已告知丙方，向商家铺货丙方承担可能存在的风险，包括盗窃、人为损坏、意外撞击；自然灾害如台风、地震、洪水、冰雹；政府行为，如征收、征用；社会异常事件，如罢工、骚乱三方面等因素可能导致设备损失。\n
+2.2.６设备保修权益遵从设备生产厂商相关规定，乙方可协助丙方联系设备生产厂商处理相关事宜。\n\n\n
+
+丙方权利义务\n
+2.3.1 丙方有权利对乙方的商家信息进行核实再进行铺货。\n
+2.3.2 丙方有义务对已安装的设备进行监督维护和售后问题处理。丙方务必保留《保修卡》，以获得设备生产厂商赋予的保修权利。在保修期内，若设备出现法定的质量问题，丙方针对终端用户下发操作说明，引导用户查阅产品配置的使用说明书处理安装及其他问题，并可通过支付宝APP扫描设备外观上展示的二维码处理维保事宜。凡符合《产品说明书》或《保修卡》中约定的保修条件的产品，【标准保修期一年】，自乙方签收生产厂商货物之日起算。\n
+2.3.3 丙方享有拒绝向甲方铺货和拥有回收设备的权利。\n
+2.3.4 丙方对设备铺货产生的风险承担责任。\n
+2.3.5 如因不可抗力因素导致的刷脸设备损失，包括但不限于自然灾害，如台风、地震、洪水、冰雹；政府行为，如征收、征用；社会异常事件，如罢工、骚乱三方面等因素，若该设备已交付给甲方则由甲方承担损失，若未交付给甲方的设备则由丙方负责。\n
+2.3.6 丙方有权利享有乙方提供渠道采购设备的活动政策和返佣政策，并遵守由乙方制定上述活动政策和返佣的具体实施方案，若因渠道原因导致活动政策有变更，乙方需提前通知丙方。\n\n
+
+第三条：解除合约条款\n
+3.1.1 甲方在使用丙方提供的设备服务期间，一年内不得解除协议，若因甲方原因导致设备不能使用或提前终止使用，甲方可向丙方提出解除设备使用，并与丙方协商设备的破损和折旧补偿。\n
+3.1.2 丙方采购设备不存在退货退款权利（符合生产厂商退货退款规定的除外）。若因第三方支付公司政策变动导致产品不使用，乙方可为甲方向第三方支付公司、设备生产商或相关的关联方之间提出协调方案。\n
+3.1.3 若因丙方违反市场规则，恶意拒绝向商家服务或向商家收取其它服务费，乙方有权终止为丙方设备提供服务，丙方十五个工作日退回乙方结算的设备补贴和分润。\n
+3.1.4 本铺货合约有效期为一年，以乐收ＡPP系统激活日为起始日。合同到期后，如双方无异议，本协议自动延续，协议期内丙方保留设备所有权。\n\n
+
+第四条：争议解决\n
+4.1.1本协议适用中华人民共和国法律（不含港、澳、台地区），并按照中华人民共和国法律解释。凡因本协议之订立、履行、终止所引起的或与本协议相关的任何争端，各方应首先友好协商解决；协商不成，任何一方有权向乙方所在地人民法院提起诉讼，诉讼费（包括但不限于收集证据的费用、律师费、执行费等）由败诉方承担。\n
+4.1.2在本协议履行过程中所有乙方向甲、丙发送的的通知、意见、文件或其他意思表示（统称文件）均需按乐收ＡPP、乙方官方网站、传真或邮箱等方式送达，除非乙方以书面方式提前通知甲丙方变更文件送达方式。\n
+</string>
+
+
+</resources>

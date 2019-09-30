@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.MyDeviceActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/ysf_text_size_10"
+        android:layout_marginBottom="@dimen/ysf_text_size_10"
+        >
+        <TextView
+            android:id="@+id/shop_around_address_tv"
+            style="@style/text_normal_style"
+            android:text="地点"
+            android:padding="@dimen/ysf_text_size_10"
+            android:layout_gravity="center"
+            android:drawableRight="@mipmap/arrow_b"
+            android:drawablePadding="8dp"
+            />
+        <SearchView
+            android:id="@+id/shop_around_search_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:focusable="false"
+            android:layout_gravity="center"
+            android:queryHint="请输入地址/店名快速查找"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+
+        >
+
+        <TextView
+            android:id="@+id/shop_around_hotel_tv"
+            style="@style/text_normal_style"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/arrow_b"
+            android:drawablePadding="8dp"
+            android:padding="16dp"
+            android:text="餐厅"
+            android:gravity="center"
+            android:textSize="@dimen/ysf_text_size_14" />
+
+        <TextView
+            android:id="@+id/shop_around_filter_tv"
+            style="@style/text_normal_style"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/arrow_b"
+            android:drawablePadding="8dp"
+            android:padding="@dimen/ysf_text_size_16"
+            android:gravity="center"
+            android:text="智能筛选"
+            android:textSize="@dimen/ysf_text_size_14" />
+
+    </LinearLayout>
+
+    <com.yzf.king.widget.MultipleStatusView
+        android:id="@+id/shop_around_multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyView="@layout/custom_empty_view"
+        app:errorView="@layout/custom_error_view"
+        app:loadingView="@layout/custom_loading_view"
+        app:noNetworkView="@layout/custom_no_network_view">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/shop_around_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <cn.droidlover.xrecyclerview.XRecyclerView
+                android:id="@+id/shop_around_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/bg_white"
+                android:paddingTop="0dp" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </com.yzf.king.widget.MultipleStatusView>
+</LinearLayout>

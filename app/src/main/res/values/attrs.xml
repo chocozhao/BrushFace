@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StateButton">
+
+        <!--text color-->
+        <attr name="normalTextColor" format="color|reference" />
+        <attr name="pressedTextColor" format="color|reference" />
+        <attr name="unableTextColor" format="color|reference" />
+
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="strokeDashWidth" format="dimension|reference" />
+        <attr name="strokeDashGap" format="dimension|reference" />
+        <attr name="normalStrokeWidth" format="dimension|reference" />
+        <attr name="pressedStrokeWidth" format="dimension|reference" />
+        <attr name="unableStrokeWidth" format="dimension|reference" />
+        <attr name="normalStrokeColor" format="color|reference" />
+        <attr name="pressedStrokeColor" format="color|reference" />
+        <attr name="unableStrokeColor" format="color|reference" />
+
+        <!--background color-->
+        <attr name="normalBackgroundColor" format="color|reference" />
+        <attr name="pressedBackgroundColor" format="color|reference" />
+        <attr name="unableBackgroundColor" format="color|reference" />
+
+        <!--background radius-->
+        <attr name="radius" format="dimension|reference" />
+        <attr name="round" format="boolean|reference" />
+
+        <!--animation duration-->
+        <attr name="animationDuration" format="integer|reference" />
+
+    </declare-styleable>
+
+    <style name="MultipleStatusView" />
+
+    <declare-styleable name="MultipleStatusView">
+        <attr name="loadingView" format="reference" />
+        <attr name="errorView" format="reference" />
+        <attr name="emptyView" format="reference" />
+        <attr name="noNetworkView" format="reference" />
+        <attr name="contentView" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StateImageView">
+        <attr name="normalBackground" format="color|reference" />
+        <attr name="pressedBackground" format="color|reference" />
+        <attr name="unableBackground" format="color|reference" />
+
+        <!--animation duration-->
+        <attr name="AnimationDuration" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RememberEditText">
+        <!-- 自动填写cache值，默认为true -->
+        <attr name="autoFill" format="boolean" />
+        <!-- 自动保存内容到cache，默认为true -->
+        <attr name="autoSave" format="boolean" />
+        <!-- 下拉框图标，默认使用系统的abc_spinner_mtrl_am_alpha -->
+        <attr name="dropDownIcon" format="reference" />
+        <!-- 删除图标，默认使用系统的abc_ic_clear_mtrl_alpha -->
+        <attr name="deleteIcon" format="reference" />
+        <!-- 保存cache的key，如果没有设置则会使用view id，需要唯一 -->
+        <attr name="rememberId" format="string" />
+        <!-- 保存cache的数量，默认保存最近3个 -->
+        <attr name="rememberCount" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="StepView">
+        <attr name="leftMargin" format="dimension" />
+        <attr name="rightMargin" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="stepViewRadius" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="defaultDotColor" format="color" />
+        <attr name="highDotColor" format="color" />
+        <attr name="dotPosition" format="enum">
+            <enum name="top" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+        <attr name="defaultDotDrawable" format="reference" />
+        <attr name="highDotDrawable" format="reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.QrCodeActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/qrcode_capture_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/bg_gray"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/qrcode_name_tv"
+                style="@style/text_normal_color_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text=""
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/text_title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/qrcode_type_tv"
+                style="@style/text_normal_color_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="扫一扫完成支付"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:id="@+id/qrcode_amt_tv"
+                style="@style/text_normal_color_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="￥0.00"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_big" />
+
+
+            <ImageView
+                android:id="@+id/qrcode_code_iv"
+                android:layout_width="250dp"
+                android:layout_height="250dp" />
+
+            <TextView
+                style="@style/text_tip_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="点击二维码可进行刷新" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

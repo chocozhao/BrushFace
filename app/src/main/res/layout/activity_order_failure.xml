@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.OrderFailureActivity">
+
+    <include layout="@layout/title_toolbar_right_text" />
+
+    <EditText
+        android:id="@+id/order_failure_et"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="请输入测试失败原因"
+        android:gravity="top"
+        android:background="@null"
+        android:padding="@dimen/ysf_text_size_20" />
+
+</LinearLayout>

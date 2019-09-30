@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.TeamDetailActivity">
+
+    <include layout="@layout/title_toolbar_theme" />
+
+    <com.yzf.king.widget.MultipleStatusView
+        android:id="@+id/profit_dtl_multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyView="@layout/custom_empty_view"
+        app:errorView="@layout/custom_error_view"
+        app:loadingView="@layout/custom_loading_view"
+        app:noNetworkView="@layout/custom_no_network_view">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/profit_dtl_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/btn_blue"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/profit_dtl_amt_tv"
+                        style="@style/text_tip_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="￥0.00"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_28" />
+
+                    <TextView
+                        android:id="@+id/profit_dtl_date_tv"
+                        style="@style/text_tip_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="20190101"
+                        android:textColor="@color/text_white" />
+                </LinearLayout>
+
+                <cn.droidlover.xrecyclerview.XRecyclerView
+                    android:id="@+id/profit_dtl_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:recyclerScrollbarNone="true"
+                    app:recyclerScrollbarStyle="outsideOverlay" />
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </com.yzf.king.widget.MultipleStatusView>
+
+
+</LinearLayout>

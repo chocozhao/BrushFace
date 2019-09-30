@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/ulbankcard_zm_iv"
+                        android:layout_width="272dp"
+                        android:layout_height="183dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/img_bank_zm" />
+
+                    <TextView
+                        android:id="@+id/ulbankcard_zm_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="tips"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/text_tip"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/text_tip_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="点击拍摄储蓄卡" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="272dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_normal_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="卡号:"
+                        android:textColor="@color/text_6" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/ulbankcard_no_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:hint="可编辑"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="@dimen/text_normal"
+                        app:x_pattern="4,4,4,4,4,4"
+                        app:x_separator=" " />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="272dp"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_gray"></View>
+
+
+                <LinearLayout
+                    android:layout_width="272dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_normal_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="预留手机号:"
+                        android:textColor="@color/text_6" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/ulbankcard_phone_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:hint="可编辑"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="@dimen/text_normal"
+                        app:x_pattern="3,4,4"
+                        app:x_separator=" " />
+
+                    <View
+                        android:layout_width="272dp"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_gray"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <com.yzf.king.widget.StateButton
+                android:id="@+id/ulbankcard_confirm_bt"
+                style="@style/button_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="确认"
+                app:normalBackgroundColor="@color/btn_blue"
+                app:pressedBackgroundColor="@color/btn_gray_p"
+                app:radius="5dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

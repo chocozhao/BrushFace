@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:divider="@drawable/divider_horizontal"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context="com.yzf.king.ui.activitys.ShopSoundBankcardActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/shop_bg_gray"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="请重新提交银行卡信息" />
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/shop_sound_bankcard_number"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="银行卡号" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/shop_sound_bankcard_number_tv"
+                    style="@style/text_normal_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/shop_sound_bankcard_number"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入银行卡卡号"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    app:x_separator=" "
+                    app:x_pattern="4,4,4,4,4,4"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/shop_sound_bankcard_name"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="开户名" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/shop_sound_bankcard_name_tv"
+                    style="@style/text_normal_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/shop_sound_bankcard_name"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入开户名"
+                     />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/shop_sound_bankcard_row"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="开户行地址" />
+
+                <com.xw.repo.XEditText
+                    style="@style/text_normal_style"
+                    android:id="@+id/shop_sound_bankcard_row_tv"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/ysf_text_size_10"
+                    android:layout_toLeftOf="@+id/shop_sound_bankcard_row_iv"
+                    android:layout_toRightOf="@+id/shop_sound_bankcard_row"
+                    android:gravity="right"
+                    android:background="@null"
+                    android:hint="请输入开户行地址(详细到支行)" />
+
+                <ImageView
+                    android:id="@+id/shop_sound_bankcard_row_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="@dimen/ysf_text_size_12"
+                    android:background="@mipmap/person_next"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/shop_sound_bankcard_address"
+                    style="@style/text_normal_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ysf_text_size_12"
+                    android:layout_marginTop="@dimen/ysf_text_size_18"
+                    android:layout_marginBottom="@dimen/ysf_text_size_18"
+                    android:text="详细地址" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/shop_sound_bankcard_address_tv"
+                    style="@style/text_normal_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/shop_sound_bankcard_address"
+                    android:background="@null"
+                    android:hint="街道、门牌号等"
+                    android:gravity="right"
+                     />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/shop_sound_bankcard_define_bt"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/ysf_text_size_24"
+                android:background="@color/btn_blue"
+                android:text="确定"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

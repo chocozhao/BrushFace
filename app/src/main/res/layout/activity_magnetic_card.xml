@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.MagneticCardActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:divider="@drawable/divider_horizontal"
+                    android:dividerPadding="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="银行卡号" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/magnetic_cardno_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入信用卡号"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:focusable="false"
+                            app:x_pattern="4,4,4,4,4,4"
+                            app:x_separator=" "
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="姓名" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/magneticcard_nameno_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入持卡人姓名"
+                            android:maxLength="5"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="身份证号" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/magneticcard_expdate_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请填写持卡人身份证号"
+                            android:inputType="number"
+                            android:maxLength="18"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            app:x_pattern="4,4,4,4,2"
+                            app:x_separator=" "
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="发卡银行" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/bindcard_bankname_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:gravity="right|center"
+                            android:hint="发卡银行"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="手机号码" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/magneticcard_phoneno_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="银行卡预留手机号"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            app:x_pattern="3,4,4"
+                            app:x_separator=" " />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bindcard_code_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            style="@style/text_normal_color_6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="验证码" />
+
+                        <com.xw.repo.XEditText
+                            android:id="@+id/magneticcard_code_tv"
+                            style="@style/text_XEditText_style"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="请输入验证码"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+
+                        <com.yzf.king.widget.StateButton
+                            android:id="@+id/magneticcard_getcode_bt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            android:text="获取验证码"
+                            android:textColor="@color/text_white"
+                            android:textSize="12sp"
+                            app:normalBackgroundColor="@color/btn_yellow"
+                            app:pressedBackgroundColor="@color/btn_yellow_p"
+                            app:radius="5dp"
+                            app:unableBackgroundColor="@color/text_tip" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.yzf.king.widget.StateButton
+                android:id="@+id/magneticcard_confirm_bt"
+                style="@style/button_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="保存"
+                app:normalBackgroundColor="@color/btn_gray"
+                app:pressedBackgroundColor="@color/btn_gray_p"
+                app:radius="5dp" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

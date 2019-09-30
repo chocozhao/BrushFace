@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.WeChatCustomerActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_20"
+        android:layout_marginTop="@dimen/ysf_text_size_20"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/login_logo" />
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/ysf_text_size_20"
+            android:text="售后客服-乐乐" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/wechat_customer_oneadd_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_20"
+        android:layout_marginTop="@dimen/ysf_text_size_24"
+        tools:text="打开微信：搜索“adfhk66”，添加好友。"
+        android:textIsSelectable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_20"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/login_logo" />
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/ysf_text_size_12"
+            android:text="售后客服-青青" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/wechat_customer_twoadd_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_20"
+        android:layout_marginTop="@dimen/ysf_text_size_24"
+        tools:text="打开微信：搜索“adfhk66”，添加好友。"
+        android:textIsSelectable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_20"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/login_logo" />
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/ysf_text_size_12"
+            android:text="售后客服-斑斑" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/wechat_customer_threeadd_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_20"
+        android:layout_marginTop="@dimen/ysf_text_size_24"
+        tools:text="打开微信：搜索“adfhk66”，添加好友。"
+        android:textIsSelectable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_20"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/login_logo" />
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/ysf_text_size_12"
+            android:text="售后客服-彩彩" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/wechat_customer_fouradd_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_20"
+        android:layout_marginTop="@dimen/ysf_text_size_24"
+        tools:text="打开微信：搜索“adfhk66”，添加好友。"
+        android:textIsSelectable="true" />
+
+
+</LinearLayout>

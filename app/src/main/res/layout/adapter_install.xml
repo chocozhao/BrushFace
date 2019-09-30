@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ysf_text_size_10"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/adapter_install_device_message"
+            style="@style/text_normal_style"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="设备信息" />
+
+        <TextView
+            android:id="@+id/adapter_install_delete_tv"
+            style="@style/text_normal_style"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="删除设备"
+            android:background="@drawable/install_del_bg_gray"
+            android:padding="6dp"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/adapter_install_replace_tv"
+            android:textSize="@dimen/text_10"
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_tip"
+            android:layout_marginRight="@dimen/ysf_text_size_10"
+            />
+        <TextView
+            android:id="@+id/adapter_install_replace_tv"
+            style="@style/text_normal_style"
+            android:layout_width="60dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="更换设备"
+            android:background="@drawable/install_finsh_bg_blue"
+            android:padding="6dp"
+            android:textSize="@dimen/text_10"
+            android:textColor="@color/btn_blue"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/ysf_text_size_20"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginBottom="@dimen/ysf_text_size_10"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_tip_style"
+            android:text="型        号：" />
+
+        <TextView
+            android:id="@+id/adapter_install_modelname_tv"
+            style="@style/text_tip_style"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginBottom="@dimen/ysf_text_size_10"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_tip_style"
+            android:text="S    N    码：" />
+
+        <TextView
+            android:id="@+id/adapter_install_sn_tv"
+            style="@style/text_tip_style"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginBottom="@dimen/ysf_text_size_10"
+
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_tip_style"
+            android:text="激  活   码：" />
+
+        <TextView
+            android:id="@+id/adapter_install_activate_tv"
+            style="@style/text_tip_style"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ysf_text_size_10"
+        android:layout_marginBottom="@dimen/ysf_text_size_10"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_tip_style"
+            android:text="序  列   码：" />
+
+        <TextView
+            android:id="@+id/adapter_install_term_tv"
+            style="@style/text_tip_style"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:text="" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+</LinearLayout>

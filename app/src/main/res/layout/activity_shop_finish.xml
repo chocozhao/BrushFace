@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yzf.king.ui.activitys.ShopFinishActivity">
+
+    <include
+        android:id="@+id/shop_finish_title"
+        layout="@layout/title_toolbar" />
+
+    <ImageView
+        android:id="@+id/shop_finish_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_finish_title"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/ysf_text_size_20"
+        android:background="@mipmap/shop_finish" />
+
+    <TextView
+        android:id="@+id/shop_finish_tv"
+        style="@style/text_normal_style"
+        android:layout_below="@+id/shop_finish_iv"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/ysf_text_size_10"
+        android:text=""
+        android:textSize="@dimen/text_normal" />
+
+    <Button
+        android:id="@+id/shop_define_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_finish_tv"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/ysf_text_size_20"
+        android:layout_marginLeft="@dimen/ysf_text_size_20"
+        android:layout_marginRight="@dimen/ysf_text_size_20"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:background="@drawable/shop_finish_btn_bg" />
+</RelativeLayout>

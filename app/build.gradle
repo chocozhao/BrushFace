@@ -1,0 +1,168 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'android-aspectjx'
+
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd')
+    return formattedDate
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        ndk {
+            //设置支持的SO库架构
+//            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+            abiFilters 'armeabi'
+        }
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    signingConfigs { //gradle assembleRelease
+        release {
+            storeFile file("D:\\project\\yishuakey\\Fpayposkey")
+            keyAlias "fpayposkey"
+            keyPassword 'yzf123488'
+            storePassword 'yzf123488'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            //自定义输出配置
+            android.applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        def fileName = "${variant.flavorName}_${defaultConfig.versionName}_${buildTime()}.apk"
+//                        outputFileName = fileName
+//                    }
+                    outputFileName = "${variant.flavorName}_${defaultConfig.versionName}_${buildTime()}.apk"
+                }
+            }
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            ext.alwaysUpdateBuildId = false
+        }
+
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        ls {
+            applicationId 'com.lstest.king'
+        }
+//        zmsmilepay {
+//            applicationId 'com.zmsmilepay.king'
+//        }
+        /* kybsmilepay {
+            applicationId 'com.kybsmilepay.king'
+        }
+        sdzfsmilepay {
+            applicationId 'com.sdzfsmilepay.king'
+        }*/
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name, JPUSH_PKGNAME: applicationId, JPUSH_APPKEY: "@string/JPUSH_APPKEY", JPUSH_CHANNEL: "@string/JPUSH_CHANNEL"]
+    }
+
+    repositories {
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/releases"
+        }
+    }
+
+    dexOptions {
+        incremental =true
+        javaMaxHeapSize "12g" //此处可根据电脑本身配置 数值越大 当然越快
+        preDexLibraries = false
+
+    }
+
+}
+
+greendao {
+    schemaVersion 2//数据库schema版本号，通过*OpenHelpers迁移数据，schema改变值增加。默认为1
+}
+
+
+
+dependencies {
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+    }
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':library')
+    annotationProcessor rootProject.ext.dependencies["butterknife-apt"]
+    api rootProject.ext.dependencies["greendao"]
+    api 'com.android.support.constraint:constraint-layout:1.1.0'
+    api 'com.xw.repo:xedittext:2.2.1@aar'
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    //noinspection GradleCompatible
+    api 'com.github.razerdp:BasePopup:2.1.9'
+    api 'com.bigkoo:ConvenientBanner:2.1.3'
+    api 'com.zxy.android:recovery:1.0.0'
+    api 'com.just.agentweb:agentweb:3.1.0'
+    api 'com.yanzhenjie:recyclerview-swipe:1.1.3'
+    api 'cn.jiguang.sdk:jpush:3.1.6'
+    // 此处以JPush 3.1.1 版本为例。
+    api 'cn.jiguang.sdk:jcore:1.2.5'
+    // 此处以JCore 1.1.9 版本为例。
+    api 'cn.jiguang.sdk:janalytics:1.2.2'
+    // 此处以JAnalytics 1.2.2 版本为例。
+    api 'top.zibin:Luban:1.1.3'
+    api 'com.android.support:multidex:1.0.1'
+    api 'com.otaliastudios:cameraview:1.5.0'
+    api 'com.github.chrisbanes:PhotoView:2.1.0'
+    implementation 'liji.library.dev:citypickerview:4.3.2'
+    api 'com.orhanobut:logger:1.15'
+    api 'com.alibaba:fastjson:1.1.56.android'
+    api 'com.huangyz0918:androidwm-light:0.1.2'
+    api 'com.hyman:flowlayout-lib:1.1.2'
+    api 'com.wdullaer:materialdatetimepicker:3.1.3'
+    api 'com.zaaach:citypicker:2.0.3'
+    api files('libs/BaiduLBS_Android.jar')
+    api 'com.allenliu.versionchecklib:library:2.0.8'
+    implementation 'com.lxj:xpopup:1.8.7'
+    api 'com.github.mcxtzhang:NestFullListView:V1.0.0'
+    api 'org.aspectj:aspectjrt:1.9.2'
+    api 'ren.qinc.numberbutton:numberbutton:0.0.1'
+    api 'com.sunfusheng:marqueeview:1.3.8'
+    api 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0'
+    api 'io.github.yuweiguocn:GreenDaoUpgradeHelper:v2.2.1'
+    api 'com.zaihuishou:expandablerecycleradapter:1.0.3'
+    api 'me.majiajie:pager-bottom-tab-strip:2.2.5'
+    api 'com.aliyun.ams:alicloud-android-hotfix:3.2.8'
+    api 'me.jessyan:autosize:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    androidTestImplementation 'com.android.support:support-annotations:28.0.0'
+    androidTestImplementation 'com.android.support.test:rules:0.5'
+    debugApi 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseApi 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+
+}

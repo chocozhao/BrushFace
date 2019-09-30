@@ -1,0 +1,101 @@
+﻿<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        Tamic
+    </title>
+</head>
+
+<body>
+<p>
+    <xmp id="show">
+    </xmp>
+</p>
+<p>
+    <xmp id="init">
+    </xmp>
+</p>
+<p>
+    <input type="text" id="text1" value="username"/>
+</p>
+
+<p>
+    <input type="text" id="text2" value="password"/>
+</p>
+
+<p>
+    <input type="button" id="enter1" value="登录（响应Native方法）" onclick="login();"
+    />
+</p>
+
+<p>
+    <input type="button" id="enter" value="发消息给Native" onclick="testClick();"
+    />
+</p>
+
+
+<p>
+    <input type="button" id="enter2" value="显示源代码" onclick="testDiv();"/>
+</p>
+
+
+<p>
+    <input type="button" id="CallNative" value="调用native" onclick="onUrl();"/>
+</p>
+
+<p>
+    <input type="file" id="open" value="打开文件" onclick="onOpen();"/>
+</p>
+
+</body>
+
+<script>
+
+      function bridgeLog(logContent) {
+            document.getElementById("show").innerHTML = logContent;
+        }
+        function connectWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) {
+                callback(WebViewJavascriptBridge)
+            } else {
+                document.addEventListener(
+                    'WebViewJavascriptBridgeReady'
+                    , function() {
+                        callback(WebViewJavascriptBridge)
+                    },
+                    false
+                );
+            }
+        }
+       // 第一连接时初始化bridage
+        connectWebViewJavascriptBridge(function(bridge) {
+            bridge.init(function(message, responseCallback) {
+                console.log('JS got a message', message);
+                var data = {
+                    'Javascript resquest': 'Hello java! 我是 js!'
+                };
+                console.log('JS responding with', data);
+                responseCallback(data);
+            });
+
+        })
+        function login() {
+            var data = "name=aaaa,pass=bbb";
+            //call native method
+            window.WebViewJavascriptBridge.callHandler(
+                'payResult'
+                , {'param': data }
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "send get responseData from java, data = " + responseData
+                }
+            );
+        }
+
+
+
+
+
+
+</script>
+
+</html>

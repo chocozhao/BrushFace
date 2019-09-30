@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activitys.OptionalMerchActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <com.yzf.king.widget.MultipleStatusView
+        android:id="@+id/optional_multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyView="@layout/custom_empty_view"
+        app:errorView="@layout/custom_error_view"
+        app:loadingView="@layout/custom_loading_view"
+        app:noNetworkView="@layout/custom_no_network_view">
+
+        <cn.droidlover.xrecyclerview.XRecyclerView
+            android:id="@+id/optional_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:recyclerBackgroundColor="@color/bg_white"
+            app:recyclerScrollbarNone="true"
+            app:recyclerScrollbarStyle="outsideOverlay" />
+
+    </com.yzf.king.widget.MultipleStatusView>
+
+</LinearLayout>

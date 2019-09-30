@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.ShopManageDtlActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/shopmanage_dtl_shop_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_20"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/shopmanage_dtl_hear_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:background="@mipmap/shop_manage_hear" />
+
+                <TextView
+                    android:id="@+id/shopmanage_dtl_title_tv"
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/shopmanage_dtl_hear_iv"
+                    android:text=""
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/shopmanage_dtl_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="6dp"
+                    android:background="@mipmap/person_next" />
+
+                <TextView
+                    android:id="@+id/shopmanage_dtl_stauts_tv"
+                    style="@style/text_tip_style"
+                    android:layout_below="@+id/shopmanage_dtl_title_tv"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:layout_toRightOf="@+id/shopmanage_dtl_hear_iv"
+                    android:text=""
+                    android:textColor="@color/btn_blue" />
+            </RelativeLayout>
+
+
+            <TextView
+                style="@style/text_normal_style"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:text="供货商信息" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:text="供  应  商：" />
+
+                <TextView
+                    android:id="@+id/shopmanage_dtl_suppliername_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:text="套        餐：" />
+
+                <TextView
+                    android:id="@+id/shopmanage_dtl_package_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:text="装机时间：" />
+
+                <TextView
+                    android:id="@+id/shopmanage_dtl_date_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shopmanage_dtl_address_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_10"
+                android:layout_marginBottom="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_tip_style"
+                    android:text="收货地址：" />
+
+                <TextView
+                    android:id="@+id/shopmanage_dtl_address_tv"
+                    style="@style/text_tip_style"
+                    android:layout_marginLeft="@dimen/ysf_text_size_10"
+                    android:text="" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <cn.droidlover.xrecyclerview.XRecyclerView
+                        android:id="@+id/shopmanage_dtl_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:recyclerBackgroundColor="@color/bg_gray"
+                        app:recyclerScrollbarNone="true"
+                        app:recyclerScrollbarStyle="outsideOverlay" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:layout_margin="@dimen/ysf_text_size_10"
+                    android:text="收益明细" />
+
+                <RelativeLayout
+                    android:id="@+id/shopmanage_dtl_income_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ysf_text_size_10"
+                    android:background="@color/white">
+
+                    <TextView
+                        style="@style/text_tip_style"
+                        android:layout_margin="@dimen/ysf_text_size_10"
+                        android:text="累计收益" />
+
+                    <TextView
+                        android:id="@+id/shopmanage_dtl_income_tv"
+                        style="@style/text_tip_style"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/ysf_text_size_10"
+                        android:layout_toLeftOf="@+id/activate_dtl_iv"
+                        android:text="0.00" />
+
+                    <ImageView
+                        android:id="@+id/activate_dtl_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="6dp"
+                        android:background="@mipmap/person_next" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_normal_style"
+                        android:layout_margin="@dimen/ysf_text_size_10"
+                        android:text="签约信息" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                    <cn.droidlover.xrecyclerview.XRecyclerView
+                        android:id="@+id/shopmanage_dtl_recyclerviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:recyclerBackgroundColor="@color/bg_gray"
+                        app:recyclerScrollbarNone="true"
+                        app:recyclerScrollbarStyle="outsideOverlay" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ysf_text_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal_style"
+                    android:text=""
+                    android:textColor="@color/btn_yellow_dark" />
+
+                <TextView
+                    android:id="@+id/shopmanage_dtl_remark_tv"
+                    style="@style/text_normal_style"
+                    android:text=""
+                    android:textColor="@color/btn_yellow_dark" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/shopmanage_dtl_resubmit_bt"
+                style="@style/text_normal_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ysf_text_size_20"
+                android:layout_marginTop="@dimen/ysf_text_size_20"
+                android:layout_marginRight="@dimen/ysf_text_size_20"
+                android:background="@drawable/proxy_btn_bg"
+                android:focusable="true"
+                android:text="重新提交资料"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

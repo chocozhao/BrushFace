@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:foreground="@drawable/selector_foreground"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/adapter_team_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon_investors" />
+
+        <TextView
+            android:id="@+id/adapter_name_tv"
+            style="@style/text_normal_color_6"
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/adapter_team_iv"
+            android:layout_alignTop="@+id/adapter_team_iv"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/adapter_levelone_tv"
+            style="@style/text_tip_style"
+            android:layout_below="@+id/adapter_name_tv"
+            android:layout_alignLeft="@+id/adapter_name_tv"
+            android:layout_toRightOf="@+id/adapter_team_iv"
+            android:layout_marginTop="@dimen/ysf_text_size_10"
+            android:textSize="10sp"
+            android:text="" />
+        <TextView
+            android:id="@+id/adapter_leveltwo_tv"
+            style="@style/text_tip_style"
+            android:layout_below="@+id/adapter_name_tv"
+            android:layout_toRightOf="@+id/adapter_levelone_tv"
+            android:layout_marginTop="@dimen/ysf_text_size_10"
+            android:textSize="10sp"
+            android:text="" />
+        <TextView
+            android:id="@+id/adapter_levelthree_tv"
+            style="@style/text_tip_style"
+            android:layout_below="@+id/adapter_name_tv"
+            android:layout_toRightOf="@+id/adapter_leveltwo_tv"
+            android:layout_marginTop="@dimen/ysf_text_size_10"
+            android:textSize="10sp"
+            android:text=""
+            />
+
+        <ImageView
+            android:id="@+id/adapter_phon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="20dp"
+            android:padding="@dimen/ysf_text_size_10"
+            android:background="@mipmap/icon_phone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="46dp"
+        android:background="@color/line_gray" />
+
+</LinearLayout>

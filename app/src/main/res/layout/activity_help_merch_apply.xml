@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzf.king.ui.activitys.HelpMerchApplyActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <TextView
+        style="@style/text_normal_style"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:layout_marginBottom="@dimen/ysf_text_size_20"
+        android:text="申请人信息"
+        android:textColor="@color/btn_blue"
+        android:textStyle="bold" />
+
+    <com.xw.repo.XEditText
+        android:id="@+id/help_merch_apply_name_et"
+        style="@style/text_normal_style"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:background="@null"
+        android:hint="请输入商家姓名"
+        android:visibility="gone"
+        />
+
+
+
+    <com.xw.repo.XEditText
+        android:id="@+id/help_merch_apply_phone_et"
+        style="@style/text_normal_style"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:background="@null"
+        android:hint="请输入商家手机号"
+        android:inputType="phone"
+        android:maxLength="15"
+        android:maxLines="1"
+        app:x_pattern="3,4,4"
+        app:x_separator=" "
+        />
+
+    <include layout="@layout/line_h" />
+
+    <com.xw.repo.XEditText
+        android:id="@+id/help_merch_apply_pwd_et"
+        style="@style/text_normal_style"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:background="@null"
+        android:hint="请输入密码"
+        android:inputType="textPassword" />
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.xw.repo.XEditText
+            android:id="@+id/help_merch_apply_getcode_et"
+            style="@style/text_normal_style"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLines="1" />
+
+        <com.yzf.king.widget.StateButton
+            android:id="@+id/help_merch_apply_getcode_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="发送验证码"
+            android:textColor="@color/text_white"
+            android:textSize="12sp"
+            app:normalBackgroundColor="@color/btn_blue"
+            app:pressedBackgroundColor="@color/btn_blue"
+            app:radius="5dp"
+            app:unableBackgroundColor="@color/text_tip" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/help_merch_apply_cb"
+            style="@style/text_tip_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:button="@null"
+            android:checked="false"
+            android:drawableLeft="@drawable/radio_proxy_button_selector"
+            android:text="   我已阅读并同意" />
+
+        <TextView
+            android:id="@+id/help_merch_apply_agreement_tv"
+            style="@style/text_tip_style"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/help_merch_apply_cb"
+            android:text="《注册合约协议》"
+            android:textColor="@color/btn_blue" />
+    </RelativeLayout>
+
+    <com.yzf.king.widget.StateButton
+        android:id="@+id/help_merch_apply_zfb_bt"
+        style="@style/text_normal_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:text="申请支付宝设备"
+        android:textColor="@color/text_white"
+        app:normalBackgroundColor="@color/btn_blue"
+        app:pressedBackgroundColor="@color/btn_blue"
+        app:radius="5dp"
+        app:unableBackgroundColor="@color/text_tip" />
+
+    <com.yzf.king.widget.StateButton
+        android:id="@+id/help_merch_apply_wx_bt"
+        style="@style/text_normal_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:text="申请微信设备"
+        android:textColor="@color/text_white"
+        app:normalBackgroundColor="@color/bg_wx_green"
+        app:pressedBackgroundColor="@color/bg_wx_green"
+        app:radius="5dp"
+        app:unableBackgroundColor="@color/text_tip" />
+
+
+</LinearLayout>

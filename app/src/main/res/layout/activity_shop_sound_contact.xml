@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/divider_horizontal"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context="com.yzf.king.ui.activitys.ShopSoundAlipayActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/shop_bg_gray"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_normal_style"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            android:text="请重新提交法人信息" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/shop_sound_contact_phone"
+            style="@style/text_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ysf_text_size_12"
+            android:layout_marginTop="@dimen/ysf_text_size_18"
+            android:layout_marginBottom="@dimen/ysf_text_size_18"
+            android:text="法人电话" />
+
+        <com.xw.repo.XEditText
+            android:id="@+id/shop_sound_contact_phone_tv"
+            style="@style/text_normal_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/shop_sound_contact_phone"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="请输入法人电话"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:maxLines="1"
+            app:x_pattern="3,4,4"
+            app:x_separator=" " />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/shop_sound_contact_email"
+            style="@style/text_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ysf_text_size_12"
+            android:layout_marginTop="@dimen/ysf_text_size_18"
+            android:layout_marginBottom="@dimen/ysf_text_size_18"
+            android:text="法人邮箱" />
+
+        <com.xw.repo.XEditText
+            android:id="@+id/shop_sound_contact_email_tv"
+            style="@style/text_normal_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/ysf_text_size_10"
+            android:layout_toRightOf="@+id/shop_sound_contact_email"
+            android:background="@null"
+            android:inputType="textEmailAddress"
+            android:gravity="right"
+            android:hint="请输入法人邮箱" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/shop_sound_contact_define_bt"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="@dimen/ysf_text_size_24"
+        android:background="@color/btn_blue"
+        android:text="确定"
+        android:textColor="@color/white" />
+
+</LinearLayout>

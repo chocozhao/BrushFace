@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/shop_manage_hear_iv"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:background="@mipmap/shop_manage_hear"
+        />
+    <ImageView
+        android:id="@+id/shop_manage_status_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ysf_text_size_10"
+        android:visibility="gone"
+        android:background="@mipmap/shop_manage_normal"
+        />
+    <LinearLayout
+        android:layout_toRightOf="@+id/shop_manage_hear_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/shop_promotion_title_tv"
+            android:layout_margin="@dimen/ysf_text_size_10"
+            style="@style/text_normal_style"
+            android:text=""
+            />
+        <TextView
+            android:id="@+id/shop_manage_date_tv"
+            style="@style/text_tip_style"
+            android:text=""
+            android:layout_marginLeft="@dimen/ysf_text_size_10"
+            android:layout_marginBottom="@dimen/ysf_text_size_10"
+            />
+
+        <include layout="@layout/line_h" />
+
+    </LinearLayout>
+
+</RelativeLayout>
